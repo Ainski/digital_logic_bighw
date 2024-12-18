@@ -62,10 +62,10 @@ module vga_top(
             .doutb(data_in),
             .enb(~rdn)
         );
-    always @ (posedge clk) begin
-        if (count==200000001) begin
+    always @ (negedge vsync) begin
+        if (count==101) begin
             count<=0;
-        end else if(count==200000000) begin
+        end else if(count==100) begin
             if(row==480&& col==640) begin
                 row<=0;
                 col<=0;
