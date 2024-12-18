@@ -55,8 +55,8 @@ set rc [catch {
   set_property ip_output_repo e:/model/my_bighw/my_bighw.cache/ip [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet E:/model/my_bighw/my_bighw.runs/synth_1/vga_top.dcp
-  add_files -quiet E:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram.dcp
-  set_property netlist_only true [get_files E:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram.dcp]
+  add_files -quiet e:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram.dcp
+  set_property netlist_only true [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram.dcp]
   add_files -quiet e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
   set_property netlist_only true [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
   read_xdc -mode out_of_context -ref vga_ram -cells U0 e:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram_ooc.xdc

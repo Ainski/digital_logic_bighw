@@ -62,29 +62,30 @@ module vga_top(
             .doutb(data_in),
             .enb(~rdn)
         );
-    always @ (negedge vsync) begin
-        if (count==101) begin
-            count<=0;
-        end else if(count==100) begin
-            if(row==480&& col==640) begin
-                row<=0;
-                col<=0;
-                count<=count+1;
-                data<=data+1;
-            end else begin
-                if(col==640)begin
-                    col<=0;
-                    row<=row+1;
+//    always @ (negedge hsync) begin
+//        if (count==1) begin
+//            count<=0;
+//        end else if(count==0) begin
+//            if(row==480&& col==640) begin
+//                row<=0;
+//                col<=0;
+//                count<=count+1;
+
+//            end else begin
+//                if(col==640)begin
+//                    col<=0;
+//                    row<=row+1;
+//                    data<=data+1;
                 
-                end else begin
-                    col<=col+1;
-                end 
-            end    
+//                end else begin
+//                    col<=col+1;
+//                end 
+//            end    
 
         
-        end else begin
-            count<=count +1 ;
-        end
-    end 
+//        end else begin
+//            count<=count +1 ;
+//        end
+//    end 
    
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date             : Wed Dec 18 21:40:43 2024
+| Date             : Wed Dec 18 22:13:21 2024
 | Host             : Nicolas-ainski running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_top_power_routed.rpt -pb vga_top_power_summary_routed.pb -rpx vga_top_power_routed.rpx
 | Design           : vga_top
@@ -49,17 +49,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.007 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1307 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      670 |     63400 |            1.06 |
+| Clocks         |     0.009 |        6 |       --- |             --- |
+| Slice Logic    |    <0.001 |     1293 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      653 |     63400 |            1.03 |
 |   Register     |    <0.001 |      109 |    126800 |            0.09 |
 |   CARRY4       |    <0.001 |        8 |     15850 |            0.05 |
+|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |      263 |       --- |             --- |
 |   F7/F8 Muxes  |     0.000 |      225 |     63400 |            0.35 |
-| Signals        |     0.002 |     1691 |       --- |             --- |
+| Signals        |     0.002 |     1676 |       --- |             --- |
 | Block RAM      |     0.002 |      128 |       135 |           94.81 |
 | MMCM           |     0.102 |        1 |         6 |           16.67 |
-| I/O            |     0.003 |       17 |       210 |            8.10 |
+| I/O            |    <0.001 |       17 |       210 |            8.10 |
 | Static Power   |     0.103 |          |           |                 |
 | Total          |     0.220 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -71,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.011 |      0.018 |
-| Vccaux    |       1.800 |     0.075 |       0.057 |      0.018 |
-| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |
+| Vccint    |       1.000 |     0.032 |       0.014 |      0.018 |
+| Vccaux    |       1.800 |     0.075 |       0.056 |      0.018 |
+| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -127,7 +128,7 @@ Table of Contents
 +-----------------------+----------------------------------+-----------------+
 | Clock                 | Domain                           | Constraint (ns) |
 +-----------------------+----------------------------------+-----------------+
-| clk_inst/inst/clk_in1 | clk_IBUF_BUFG                    |            10.0 |
+| clk_inst/inst/clk_in1 | clk_IBUF                         |            10.0 |
 | clk_out1_clk_wiz_0    | clk_inst/inst/clk_out1_clk_wiz_0 |            19.9 |
 | clkfbout_clk_wiz_0    | clk_inst/inst/clkfbout_clk_wiz_0 |            50.0 |
 +-----------------------+----------------------------------+-----------------+
@@ -146,11 +147,11 @@ Table of Contents
 |   clk_inst                                   |     0.102 |
 |     inst                                     |     0.102 |
 |   vga_inst                                   |     0.001 |
-|   vga_ram_inst                               |     0.008 |
-|     U0                                       |     0.008 |
-|       inst_blk_mem_gen                       |     0.008 |
-|         gnbram.gnativebmg.native_blk_mem_gen |     0.008 |
-|           valid.cstr                         |     0.008 |
+|   vga_ram_inst                               |     0.012 |
+|     U0                                       |     0.012 |
+|       inst_blk_mem_gen                       |     0.012 |
+|         gnbram.gnativebmg.native_blk_mem_gen |     0.012 |
+|           valid.cstr                         |     0.012 |
 |             has_mux_b.B                      |     0.001 |
 |             ramloop[0].ram.r                 |    <0.001 |
 |               prim_noinit.ram                |    <0.001 |
