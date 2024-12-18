@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Dec 18 22:12:06 2024">
+<application name="pa" timeStamp="Wed Dec 18 22:59:19 2024">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="dd95b4d716a34e498cdfdc7826fd3e9b" type="ProjectID"/>
 <property name="ProjectIteration" value="65" type="ProjectIteration"/>
@@ -21,8 +21,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddSources" value="7" type="JavaHandler"/>
 <property name="AutoConnectTarget" value="13" type="JavaHandler"/>
 <property name="CloseProject" value="4" type="JavaHandler"/>
-<property name="CoreView" value="4" type="JavaHandler"/>
-<property name="CustomizeCore" value="12" type="JavaHandler"/>
+<property name="CoreView" value="5" type="JavaHandler"/>
+<property name="CustomizeCore" value="13" type="JavaHandler"/>
 <property name="DebugWizardCmdHandler" value="1" type="JavaHandler"/>
 <property name="EditDelete" value="4" type="JavaHandler"/>
 <property name="EditPaste" value="1" type="JavaHandler"/>
@@ -30,13 +30,13 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="EditUndo" value="1" type="JavaHandler"/>
 <property name="FlipToViewTaskSynthesis" value="8" type="JavaHandler"/>
 <property name="LaunchOpenTarget" value="6" type="JavaHandler"/>
-<property name="LaunchProgramFpga" value="51" type="JavaHandler"/>
+<property name="LaunchProgramFpga" value="53" type="JavaHandler"/>
 <property name="ManageCompositeTargets" value="2" type="JavaHandler"/>
 <property name="NewHardwareDashboard" value="1" type="JavaHandler"/>
 <property name="NewProject" value="1" type="JavaHandler"/>
-<property name="OpenHardwareManager" value="58" type="JavaHandler"/>
+<property name="OpenHardwareManager" value="59" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="18" type="JavaHandler"/>
-<property name="ProgramDevice" value="36" type="JavaHandler"/>
+<property name="ProgramDevice" value="37" type="JavaHandler"/>
 <property name="ProjectSettingsCmdHandler" value="8" type="JavaHandler"/>
 <property name="RecustomizeCore" value="22" type="JavaHandler"/>
 <property name="RefreshDevice" value="2" type="JavaHandler"/>
@@ -53,10 +53,41 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SimulationRunAll" value="37" type="JavaHandler"/>
 <property name="SimulationRunForTime" value="75" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="4" type="JavaHandler"/>
-<property name="ViewTaskProjectManager" value="30" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="31" type="JavaHandler"/>
 <property name="ViewTaskSimulation" value="3" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="8" type="JavaHandler"/>
 <property name="XdcCreateClock" value="1" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="Defines the PortA Write Width(DINA" value="1" type="GuiResourceData"/>
+<property name="Memory Type (Memory_Type" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3, 18" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3, 18, Block Memory Generator, 0, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3, 18, Block Memory Generator, 0, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Memories  Storage Elements ;  ;  ;  ; , 12" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, RAMs  ROMs  BRAM ;  ;  ;  ; , 17" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, IP Integrator], 5, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Program Device], 28, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, IP Catalog], 4, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.HACGCCoeFileWidget_BROWSE, Browse" value="2" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, Program device" value="1" type="GuiResourceData"/>
+<property name="PAResourceOtoP.ProgramFpgaDialog_PROGRAM, Program" value="1" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, Generate" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
+<property name="Write Depth, 5224288" value="1" type="GuiResourceData"/>
+<property name="Write Depth, 524288" value="1" type="GuiResourceData"/>
+<property name="keyboard.v, 329, 162" value="1" type="GuiResourceData"/>
+<property name="vga_top.v, 348, 228" value="1" type="GuiResourceData"/>
+<property name="vga_top.v, 473, 249" value="1" type="GuiResourceData"/>
+<property name="vga_top.v, 74, 402" value="1" type="GuiResourceData"/>
+<property name="vga_top.v, 75, 420" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="142" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="96" type="TclMode"/>
 </item>
 </section>
 </application>
