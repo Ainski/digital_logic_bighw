@@ -1,5 +1,5 @@
 `timescale 1ps/1ps
-module covert_to_vga (
+module convert_to_vga (
     input clk_out,
     input rst_n,//also rom_data_ena
 
@@ -13,116 +13,115 @@ module covert_to_vga (
     output [8:0]wt_data_out,
 
     output [18:0] bg_rom_addr,
-    output bg_rom_addr_ena,
     input [8:0] bg_rom_data
     );
 
     //把上面注释的字模数据加入到下面
     
-    parameter [127:0] FONT_0 = 128'h00000018244242424242424224180000;
-    parameter [127:0] FONT_1 = 128'h000000083808080808080808083E0000;
-    parameter [127:0] FONT_2 = 128'h0000003C4242420204081020427E0000;
-    parameter [127:0] FONT_3 = 128'h0000003C4242020418040242423C0000;
-    parameter [127:0] FONT_4 = 128'h000000040C0C142424447F04041F0000;
-    parameter [127:0] FONT_5 = 128'h0000007E404040784402024244380000;
-    parameter [127:0] FONT_6 = 128'h000000182440405C624242221C000000;
-    parameter [127:0] FONT_7 = 128'h0000007E420404080810101010000000;
-    parameter [127:0] FONT_8 = 128'h0000003C42422418244242423C000000;
-    parameter [127:0] FONT_9 = 128'h00000038444242463A02022418000000;
-    parameter [127:0] FONT_a = 128'h00000000000038440C34444C36000000;
-    parameter [127:0] FONT_b = 128'h000000C0404058644242645800000000;
-    parameter [127:0] FONT_c = 128'h00000000001C224040221C0000000000;
-    parameter [127:0] FONT_d = 128'h0000000602023E4242463B0000000000;
-    parameter [127:0] FONT_e = 128'h000000003C427E40423C000000000000;
-    parameter [127:0] FONT_f = 128'h0000000C127C1010107C000000000000;
-    parameter [127:0] FONT_g = 128'h0000003E4438403C42423C0000000000;
-    parameter [127:0] FONT_h = 128'h000000C0405C624242E7000000000000;
-    parameter [127:0] FONT_i = 128'h00003030701010107C00000000000000;
-    parameter [127:0] FONT_j = 128'h00000C0C1C0404044478000000000000;
-    parameter [127:0] FONT_k = 128'h0000C0404E4850704844EE0000000000;
-    parameter [127:0] FONT_l = 128'h001070101010107C0000000000000000;
-    parameter [127:0] FONT_m = 128'h000000FE49494949ED00000000000000;
-    parameter [127:0] FONT_n = 128'h000000DC624242E70000000000000000;
-    parameter [127:0] FONT_o = 128'h0000003C4242423C0000000000000000;
-    parameter [127:0] FONT_p = 128'h000000D86442645840E0000000000000;
-    parameter [127:0] FONT_q = 128'h0000001A2642261A0207000000000000;
-    parameter [127:0] FONT_r = 128'h000000EE322020F80000000000000000;
-    parameter [127:0] FONT_s = 128'h0000003E42403C027C00000000000000;
-    parameter [127:0] FONT_t = 128'h0000107C1010120C0000000000000000;
-    parameter [127:0] FONT_u = 128'h000000C642463B000000000000000000;
-    parameter [127:0] FONT_v = 128'h000000EE442828101000000000000000;
-    parameter [127:0] FONT_w = 128'h000000DB894A5A542424000000000000;
-    parameter [127:0] FONT_x = 128'h00000076241818246E00000000000000;
-    parameter [127:0] FONT_y = 128'h000000E7422418101060000000000000;
-    parameter [127:0] FONT_z = 128'h0000007E440810227E00000000000000;
-    parameter [127:0] FONT_A = 128'h0000101828243C4442E7000000000000;
-    parameter [127:0] FONT_B = 128'h0000F8444478444244F8000000000000;
-    parameter [127:0] FONT_C = 128'h00003E42808080443800000000000000;
-    parameter [127:0] FONT_D = 128'h0000F844424244F80000000000000000;
-    parameter [127:0] FONT_E = 128'h0000FC4248784842FC00000000000000;
-    parameter [127:0] FONT_F = 128'h0000FC42487840E00000000000000000;
-    parameter [127:0] FONT_G = 128'h00003C44808E44380000000000000000;
-    parameter [127:0] FONT_H = 128'h0000E742427E42E70000000000000000;
-    parameter [127:0] FONT_I = 128'h00007C1010107C000000000000000000;
-    parameter [127:0] FONT_J = 128'h00003E0808080888F000000000000000;
-    parameter [127:0] FONT_K = 128'h0000EE444850704844EE000000000000;
-    parameter [127:0] FONT_L = 128'h0000E0404042FE000000000000000000;
-    parameter [127:0] FONT_M = 128'h0000EE6C6C5454D60000000000000000;
-    parameter [127:0] FONT_N = 128'h0000C762524A4AE20000000000000000;
-    parameter [127:0] FONT_O = 128'h00003844828244380000000000000000;
-    parameter [127:0] FONT_P = 128'h0000FC427C40E0000000000000000000;
-    parameter [127:0] FONT_Q = 128'h0000384482B24C380600000000000000;
-    parameter [127:0] FONT_R = 128'h0000FC427C4844E30000000000000000;
-    parameter [127:0] FONT_S = 128'h00003E424020047C0000000000000000;
-    parameter [127:0] FONT_T = 128'h0000FE92101038000000000000000000;
-    parameter [127:0] FONT_U = 128'h0000E74242423C000000000000000000;
-    parameter [127:0] FONT_V = 128'h0000E742242818100000000000000000;
-    parameter [127:0] FONT_W = 128'h0000D654546C28280000000000000000;
-    parameter [127:0] FONT_X = 128'h0000E724182442E70000000000000000;
-    parameter [127:0] FONT_Y = 128'h0000EE28101038000000000000000000;
-    parameter [127:0] FONT_Z = 128'h00007E04081042FC0000000000000000;
-    parameter [127:0] FONT_SPACE = 128'h00000000000000000000000000000000;
-    parameter [127:0] FONT_EXCLAMATION = 128'h00001010101010100010100000000000;
-    parameter [127:0] FONT_TILDE = 128'h205A0400000000000000000000000000;
-    parameter [127:0] FONT_AT = 128'h0038445AAAAA5C423C00000000000000;
-    parameter [127:0] FONT_HASH = 128'h00127E247E2424000000000000000000;
-    parameter [127:0] FONT_DOLLAR = 128'h083C4A48380C0A4A3C08080000000000;
-    parameter [127:0] FONT_PERCENT = 128'h44A4A8B0541A2A4A4400000000000000;
-    parameter [127:0] FONT_CARET = 128'h18240000000000000000000000000000;
-    parameter [127:0] FONT_AMPERSAND = 128'h304848506EA494897600000000000000;
-    parameter [127:0] FONT_ASTERISK = 128'h0010D63838D610000000000000000000;
-    parameter [127:0] FONT_LPAREN = 128'h02040810101008080402000000000000;
-    parameter [127:0] FONT_RPAREN = 128'h40201008080810102040000000000000;
-    parameter [127:0] FONT_UNDERSCORE = 128'h000000000000000000000000000000FF;
-    parameter [127:0] FONT_PLUS = 128'h000008087F0808000000000000000000;
-    parameter [127:0] FONT_MINUS = 128'h000000007E0000000000000000000000;
-    parameter [127:0] FONT_EQUAL = 128'h0000007E007E00000000000000000000;
-    parameter [127:0] FONT_LBRACKET = 128'h1E1010101010101E0000000000000000;
-    parameter [127:0] FONT_RBRACKET = 128'h78080808080808780000000000000000;
-    parameter [127:0] FONT_BACKSLASH = 128'h40202010100808040402020000000000;
-    parameter [127:0] FONT_SEMICOLON = 128'h00000010000010100000000000000000;
-    parameter [127:0] FONT_APOSTROPHE = 128'h60204000000000000000000000000000;
-    parameter [127:0] FONT_COMMA = 128'h00000000006020204000000000000000;
-    parameter [127:0] FONT_PERIOD = 128'h00000000606000000000000000000000;
-    parameter [127:0] FONT_SLASH = 128'h02040408101020204000000000000000;
-    parameter [127:0] FONT_LBRACE = 128'h03040404040804040300000000000000;
-    parameter [127:0] FONT_RBRACE = 128'hC020202020102020C000000000000000;
-    parameter [127:0] FONT_PIPE = 128'h08080808080808080808080808080808;
-    parameter [127:0] FONT_COLON = 128'h00001818000018180000000000000000;
-    parameter [127:0] FONT_QUOTE = 128'h12244800000000000000000000000000;
-    parameter [127:0] FONT_LESS = 128'h02040810201008040200000000000000;
-    parameter [127:0] FONT_GREATER = 128'h40201008040204081020400000000000;
-    parameter [127:0] FONT_QUESTION = 128'h3C426204080800181800000000000000;
+    parameter [127:0] FONT_0 = 128'h0000386CC6C6D6D6C6C66C3800000000;       //0x30'0'
+//parameter [127:0] FONT_0 = 128'hFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;       //0x30'0'
+
+    parameter [127:0] FONT_1 = 128'h00001838781818181818187E00000000;       //0x31'1'
+    parameter [127:0] FONT_2 = 128'h00007CC6060C183060C0C6FE00000000;       //0x32'2'
+    parameter [127:0] FONT_3 = 128'h00007CC606063C060606C67C00000000;       //0x33'3'
+    parameter [127:0] FONT_4 = 128'h00000C1C3C6CCCFE0C0C0C1E00000000;       //0x34'4'
+    parameter [127:0] FONT_5 = 128'h0000FEC0C0C0FC060606C67C00000000;       //0x35'5'
+    parameter [127:0] FONT_6 = 128'h00003860C0C0FCC6C6C6C67C00000000;       //0x36'6'
+    parameter [127:0] FONT_7 = 128'h0000FEC606060C183030303000000000;       //0x37'7'
+    parameter [127:0] FONT_8 = 128'h00007CC6C6C67CC6C6C6C67C00000000;       //0x38'8'
+    parameter [127:0] FONT_9 = 128'h00007CC6C6C67E0606060C7800000000;       //0x39'9'
+    parameter [127:0] FONT_a = 128'h0000000000780C7CCCCCCC7600000000;       //0x61'a'
+    parameter [127:0] FONT_b = 128'h0000E06060786C666666667C00000000;       //0x62'b'
+    parameter [127:0] FONT_c = 128'h00000000007CC6C0C0C0C67C00000000;       //0x63'c'
+    parameter [127:0] FONT_d = 128'h00001C0C0C3C6CCCCCCCCC7600000000;       //0x64'd'
+    parameter [127:0] FONT_e = 128'h00000000007CC6FEC0C0C67C00000000;       //0x65'e'
+    parameter [127:0] FONT_f = 128'h0000386C6460F060606060F000000000;       //0x66'f'
+    parameter [127:0] FONT_g = 128'h000000000076CCCCCCCCCC7C0CCC7800;       //0x67'g'
+    parameter [127:0] FONT_h = 128'h0000E060606C7666666666E600000000;       //0x68'h'
+    parameter [127:0] FONT_i = 128'h00001818003818181818183C00000000;       //0x69'i'
+    parameter [127:0] FONT_j = 128'h00000606000E06060606060666663C00;       //0x6A'j'
+    parameter [127:0] FONT_k = 128'h0000E06060666C78786C66E600000000;       //0x6B'k'
+    parameter [127:0] FONT_l = 128'h00003818181818181818183C00000000;       //0x6C'l'
+    parameter [127:0] FONT_m = 128'h0000000000ECFED6D6D6D6C600000000;       //0x6D'm'
+    parameter [127:0] FONT_n = 128'h0000000000DC66666666666600000000;       //0x6E'n'
+    parameter [127:0] FONT_o = 128'h00000000007CC6C6C6C6C67C00000000;       //0x6F'o'
+    parameter [127:0] FONT_p = 128'h0000000000DC66666666667C6060F000;       //0x70'p'
+    parameter [127:0] FONT_q = 128'h000000000076CCCCCCCCCC7C0C0C1E00;       //0x71'q'
+    parameter [127:0] FONT_r = 128'h0000000000DC7666606060F000000000;       //0x72'r'
+    parameter [127:0] FONT_s = 128'h00000000007CC660380CC67C00000000;       //0x73's'
+    parameter [127:0] FONT_t = 128'h0000103030FC30303030361C00000000;       //0x74't'
+    parameter [127:0] FONT_u = 128'h0000000000CCCCCCCCCCCC7600000000;       //0x75'u'
+    parameter [127:0] FONT_v = 128'h000000000066666666663C1800000000;       //0x76'v'
+    parameter [127:0] FONT_w = 128'h0000000000C6C6D6D6D6FE6C00000000;       //0x77'w'
+    parameter [127:0] FONT_x = 128'h0000000000C66C3838386CC600000000;       //0x78'x'
+    parameter [127:0] FONT_y = 128'h0000000000C6C6C6C6C6C67E060CF800;       //0x79'y'
+    parameter [127:0] FONT_z = 128'h0000000000FECC183060C6FE00000000;       //0x7A'z'
+    parameter [127:0] FONT_A = 128'h000010386CC6C6FEC6C6C6C600000000;       //0x41'A'
+    parameter [127:0] FONT_B = 128'h0000FC6666667C66666666FC00000000;       //0x42'B'
+    parameter [127:0] FONT_C = 128'h00003C66C2C0C0C0C0C2663C00000000;       //0x43'C'
+    parameter [127:0] FONT_D = 128'h0000F86C6666666666666CF800000000;       //0x44'D'
+    parameter [127:0] FONT_E = 128'h0000FE6662687868606266FE00000000;       //0x45'E'
+    parameter [127:0] FONT_F = 128'h0000FE6662687868606060F000000000;       //0x46'F'
+    parameter [127:0] FONT_G = 128'h00003C66C2C0C0DEC6C6663A00000000;       //0x47'G'
+    parameter [127:0] FONT_H = 128'h0000C6C6C6C6FEC6C6C6C6C600000000;       //0x48'H'
+    parameter [127:0] FONT_I = 128'h00003C18181818181818183C00000000;       //0x49'I'
+    parameter [127:0] FONT_J = 128'h00001E0C0C0C0C0CCCCCCC7800000000;       //0x4A'J'
+    parameter [127:0] FONT_K = 128'h0000E666666C78786C6666E600000000;       //0x4B'K'
+    parameter [127:0] FONT_L = 128'h0000F06060606060606266FE00000000;       //0x4C'L'
+    parameter [127:0] FONT_M = 128'h0000C6EEFEFED6C6C6C6C6C600000000;       //0x4D'M'
+    parameter [127:0] FONT_N = 128'h0000C6E6F6FEDECEC6C6C6C600000000;       //0x4E'N'
+    parameter [127:0] FONT_O = 128'h00007CC6C6C6C6C6C6C6C67C00000000;       //0x4F'O'
+    parameter [127:0] FONT_P = 128'h0000FC6666667C60606060F000000000;       //0x50'P'
+    parameter [127:0] FONT_Q = 128'h00007CC6C6C6C6C6C6D6DE7C0C0E0000;       //0x51'Q'
+    parameter [127:0] FONT_R = 128'h0000FC6666667C6C666666E600000000;       //0x52'R'
+    parameter [127:0] FONT_S = 128'h00007CC6C660380C06C6C67C00000000;       //0x53'S'
+    parameter [127:0] FONT_T = 128'h00007E7E5A1818181818183C00000000;       //0x54'T'
+    parameter [127:0] FONT_U = 128'h0000C6C6C6C6C6C6C6C6C67C00000000;       //0x55'U'
+    parameter [127:0] FONT_V = 128'h0000C6C6C6C6C6C6C66C381000000000;       //0x56'V'
+    parameter [127:0] FONT_W = 128'h0000C6C6C6C6D6D6D6FEEE6C00000000;       //0x57'W'
+    parameter [127:0] FONT_X = 128'h0000C6C66C7C38387C6CC6C600000000;       //0x58'X'
+    parameter [127:0] FONT_Y = 128'h0000666666663C181818183C00000000;       //0x59'Y'
+    parameter [127:0] FONT_Z = 128'h0000FEC6860C183060C2C6FE00000000;       //0x5A'Z'
+    parameter [127:0] FONT_SPACE = 128'h00000000000000000000000000000000;       //0x20' '
+    parameter [127:0] FONT_EXCLAMATION = 128'h0000183C3C3C18181800181800000000;       //0x21'!'
+    parameter [127:0] FONT_TILDE = 128'h000076DC000000000000000000000000;       //0x7E'~'
+    parameter [127:0] FONT_AT = 128'h0000007CC6C6DEDEDEDCC07C00000000;       //0x40'@'
+    parameter [127:0] FONT_HASH = 128'h0000006C6CFE6C6C6CFE6C6C00000000;       //0x23'#'
+    parameter [127:0] FONT_DOLLAR = 128'h18187CC6C2C07C060686C67C18180000;       //0x24'$'
+    parameter [127:0] FONT_PERCENT = 128'h000000C2C60C183060C6860000000000;       //0x25'%'
+    parameter [127:0] FONT_CARET = 128'h10386CC6000000000000000000000000;       //0x5E'^'
+    parameter [127:0] FONT_AMPERSAND = 128'h0000386C6C3876DCCCCCCC7600000000;       //0x26'&'
+    parameter [127:0] FONT_ASTERISK = 128'h00000010D63838D61000000000000000;       //0x2A'*'
+    parameter [127:0] FONT_LPAREN = 128'h00000C18303030303030180C00000000;       //0x28'('
+    parameter [127:0] FONT_RPAREN = 128'h000030180C0C0C0C0C0C183000000000;       //0x29')'
+    parameter [127:0] FONT_UNDERSCORE = 128'h00000000000000000000000000FF0000;       //0x5F'_'
+    parameter [127:0] FONT_PLUS = 128'h000000000018187E1818000000000000;       //0x2B'+'
+    parameter [127:0] FONT_MINUS = 128'h00000000000000FE0000000000000000;       //0x2D'-'
+    parameter [127:0] FONT_EQUAL = 128'h00000000007E00007E00000000000000;       //0x3D'='
+    parameter [127:0] FONT_LBRACKET = 128'h00003C30303030303030303C00000000;       //0x5B'['
+    parameter [127:0] FONT_RBRACKET = 128'h00003C0C0C0C0C0C0C0C0C3C00000000;       //0x5D']'
+    parameter [127:0] FONT_BACKSLASH = 128'h000080C0E070381C0E06020000000000;       //0x5C'\'
+    parameter [127:0] FONT_SEMICOLON = 128'h00000000181800000018180000000000;       //0x3B';'
+    parameter [127:0] FONT_APOSTROPHE = 128'h00003030180000000000000000000000;       //0x60'`'
+    parameter [127:0] FONT_COMMA = 128'h00000000000000000018181830000000;       //0x2C','
+    parameter [127:0] FONT_PERIOD = 128'h00000000000000000000181800000000;       //0x2E'.'
+    parameter [127:0] FONT_SLASH = 128'h0000000002060C183060C08000000000;       //0x2F'/'
+    parameter [127:0] FONT_LBRACE = 128'h00000E18181870181818180E00000000;       //0x7B'{'
+    parameter [127:0] FONT_RBRACE = 128'h0000701818180E181818187000000000;       //0x7D'}'
+    parameter [127:0] FONT_PIPE = 128'h00001818181800181818181800000000;       //0x7C'|'
+    parameter [127:0] FONT_COLON = 128'h00000000181800000018180000000000;       //0x3A':'
+    parameter [127:0] FONT_QUOTE = 128'h00003030180000000000000000000000;       //0x60'`'
+    parameter [127:0] FONT_LESS = 128'h000000060C18306030180C0600000000;       //0x3C'<'
+    parameter [127:0] FONT_GREATER = 128'h0000006030180C060C18306000000000;       //0x3E'>'
+    parameter [127:0] FONT_QUESTION = 128'h00007CC6C60C18181800181800000000;       //0x3F'?'
 
 
     reg start_rst=0;
     reg [9:0] bg_rom_addr_col_reg=0;
     reg [8:0] bg_rom_addr_row_reg=0;
     reg [8:0] bg_rom_data_reg=0;
-    reg bg_rom_addr_ena_reg=0;
     reg [127:0] font_data;
     assign bg_rom_addr = {bg_rom_addr_row_reg, bg_rom_addr_col_reg};
-    assign bg_rom_addr_ena = bg_rom_addr_ena_reg;
     assign bg_rom_data = bg_rom_data_reg;
 
     reg [9:0] vga_col_reg=0;
@@ -130,7 +129,10 @@ module covert_to_vga (
     reg [8:0] vga_data_reg=0;
     reg vga_data_ena_reg=0;
 
-
+    reg [3:0]letter_row=0;
+    reg [2:0]letter_col=0;
+    reg [8:0]letter_data_reg=0;
+    reg letter_ena=0;
     assign wt_addr_vga_out = {vga_row_reg, vga_col_reg};
     assign wt_data_out = vga_data_reg;
     assign wt_en_vga = vga_data_ena_reg;
@@ -138,8 +140,9 @@ module covert_to_vga (
 
     always @ (posedge clk_out )begin
         if(rst_n == 0)begin
-            start_rst <= 1;
-            bg_rom_addr_ena_reg <= 1;
+            if(~letter_ena&~start_rst)begin
+                start_rst <= 1;
+            end
 
             bg_rom_addr_row_reg <= 0;
             bg_rom_addr_col_reg <= 0;
@@ -161,7 +164,6 @@ module covert_to_vga (
                     bg_rom_addr_col_reg <= 0;
                     vga_data_ena_reg <= 0;
                     start_rst <= 0;
-                    bg_rom_addr_ena_reg <= 0;
                 end else begin
                     bg_rom_addr_row_reg <= bg_rom_addr_row_reg + 1;
                     bg_rom_addr_col_reg <= 0;
@@ -177,12 +179,9 @@ module covert_to_vga (
         end
     end
      
-    reg [3:0]letter_row=0;
-    reg [2:0]letter_col=0;
-    reg [8:0]letter_data_reg=0;
-    reg letter_ena=0;
+
     always @ (posedge clk_out )begin
-        if(rst_n && wt_en)begin
+        if(rst_n & wt_en&~start_rst)begin
             letter_ena <= 1;
             vga_data_ena_reg <= 1;
         end
@@ -289,7 +288,7 @@ module covert_to_vga (
         endcase
     end
     always @ (posedge clk_out )begin
-        if(rst_n && wt_en && letter_ena)begin
+        if(letter_ena)begin
             if(letter_col==7)begin
                 if(letter_row==15)begin
                     letter_row <= 0;
@@ -303,6 +302,7 @@ module covert_to_vga (
                 end
             end else begin
                 letter_col <= letter_col + 1;
+                letter_row<=letter_row;
             end
             vga_data_reg <= letter_data_reg;
             vga_col_reg <= {scrn_bfr_col, letter_col};
@@ -310,7 +310,7 @@ module covert_to_vga (
             vga_data_ena_reg <= 1;
             //根据上面被注释的字模，如果这一位为1，letter_data_reg 赋值为1ffh，否则赋值为00h
             if(font_data[{letter_row, letter_col}])begin
-                letter_data_reg <= 255;
+                letter_data_reg <= 9'b111111111;
             end else begin
                 letter_data_reg <= 0;
             end

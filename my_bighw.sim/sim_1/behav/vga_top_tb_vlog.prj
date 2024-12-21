@@ -11,10 +11,13 @@ verilog blk_mem_gen_v8_3_3  "../../../my_bighw.ip_user_files/ipstatic/blk_mem_ge
 verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/ip/vga_ram_1/sim/vga_ram.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
 verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
 verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/ip/background_rom/sim/background_rom.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
 verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/vga.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
 verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/vga_top.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
 verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/keyboard.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
-verilog xil_defaultlib  "../../../my_bighw.srcs/sim_1/new/vga_top_tb.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/screen_top.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/convert_to_vga.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sim_1/new/screen_top_tb.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

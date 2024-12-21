@@ -42,11 +42,11 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir E:/model/my_bighw/my_bighw.cache/wt [current_project]
@@ -59,6 +59,8 @@ set rc [catch {
   set_property netlist_only true [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram.dcp]
   add_files -quiet e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp
   set_property netlist_only true [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp]
+  add_files -quiet E:/model/my_bighw/my_bighw.srcs/sources_1/ip/background_rom/background_rom.dcp
+  set_property netlist_only true [get_files E:/model/my_bighw/my_bighw.srcs/sources_1/ip/background_rom/background_rom.dcp]
   read_xdc -mode out_of_context -ref vga_ram -cells U0 e:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram_ooc.xdc
   set_property processing_order EARLY [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/vga_ram_ooc.xdc]
   read_xdc -mode out_of_context -ref clk_wiz_0 -cells inst e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc
@@ -67,6 +69,8 @@ set rc [catch {
   set_property processing_order EARLY [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
   read_xdc -ref clk_wiz_0 -cells inst e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc
   set_property processing_order EARLY [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+  read_xdc -mode out_of_context -ref background_rom -cells U0 e:/model/my_bighw/my_bighw.srcs/sources_1/ip/background_rom/background_rom_ooc.xdc
+  set_property processing_order EARLY [get_files e:/model/my_bighw/my_bighw.srcs/sources_1/ip/background_rom/background_rom_ooc.xdc]
   read_xdc E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc
   link_design -top vga_top -part xc7a100tcsg324-1
   write_hwdef -file vga_top.hwdef
@@ -129,21 +133,5 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-}
-
-start_step write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  catch { write_mem_info -force vga_top.mmi }
-  write_bitstream -force vga_top.bit 
-  catch { write_sysdef -hwdef vga_top.hwdef -bitfile vga_top.bit -meminfo vga_top.mmi -file vga_top.sysdef }
-  catch {write_debug_probes -quiet -force debug_nets}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
 }
 

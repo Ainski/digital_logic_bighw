@@ -32,7 +32,7 @@ module vga (
     parameter V_ALL = V_RES + V_FP + V_SYNC + V_BP;
     
 
-    reg vga_clk;//25MHz clock
+    reg vga_clk=0;//25MHz clock
     reg [8:0] data_reg;//data register for input data
     reg video_out;//video output enable
     
@@ -92,7 +92,7 @@ module vga (
     assign vsync = (v_count >= V_SYNC);
 
     assign r = (video_out)? {data_reg[8:6],1'b1} : 4'b0000;
-    assign g = (video_out)? {data_reg[5:3],1'b1}: 4'b0000;
+    assign g = (video_out)? {data_reg[5:3],1'b1}:  4'b0000;
     assign b = (video_out)? {data_reg[2:0],1'b1} : 4'b0000;
 //    assign r = h_count[9:6];
 //    assign g = h_count[6:3];

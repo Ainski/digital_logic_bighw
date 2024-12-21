@@ -41,13 +41,19 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sou
 INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/ip/background_rom/sim/background_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module background_rom
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module vga
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module vga_top
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/keyboard.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ps2_keyboard
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sim_1/new/vga_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PS2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/screen_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module screen_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convert_to_vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sim_1/new/screen_top_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module vga_top_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

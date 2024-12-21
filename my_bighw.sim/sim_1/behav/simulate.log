@@ -2,5 +2,7 @@ Vivado Simulator 2016.2
 Time resolution is 1 ps
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module vga_top_tb.vga_top_inst.vga_ram_inst.inst.native_mem_module.blk_mem_gen_v8_3_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Warning: [Unisim MMCME2_ADV-20] Input CLKIN1 period and attribute CLKIN1_PERIOD are not same. Instance vga_top_tb.vga_top_inst.clk_inst.inst.mmcm_adv_inst 
+Block Memory Generator module vga_top_tb.uut.bg_rom.inst.native_mem_module.blk_mem_gen_v8_3_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module vga_top_tb.uut.vga_top_inst.vga_ram_inst.inst.native_mem_module.blk_mem_gen_v8_3_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_3_3 collision detected at time: 434545, A write address: 3c0f, B read address: 3c0f
+blk_mem_gen_v8_3_3 collision detected at time: 434555, A write address: 3c0f, B read address: 3c0f

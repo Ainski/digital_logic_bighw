@@ -1,0 +1,11 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a287d1b3527b4828ba6832311d263bb4 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot vga_top_tb_func_synth xil_defaultlib.vga_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-426] cannot find port wena on this module [E:/model/my_bighw/my_bighw.srcs/sim_1/new/screen_top_tb.v:109]
+ERROR: [VRFC 10-426] cannot find port clk_out on this module [E:/model/my_bighw/my_bighw.srcs/sim_1/new/screen_top_tb.v:110]
+ERROR: [VRFC 10-426] cannot find port wt_data on this module [E:/model/my_bighw/my_bighw.srcs/sim_1/new/screen_top_tb.v:112]
+ERROR: [VRFC 10-426] cannot find port wt_addr on this module [E:/model/my_bighw/my_bighw.srcs/sim_1/new/screen_top_tb.v:113]
+ERROR: [VRFC 10-426] cannot find port wena on this module [E:/model/my_bighw/my_bighw.srcs/sim_1/new/screen_top_tb.v:114]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

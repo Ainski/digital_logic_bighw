@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "vga_top_tb_func_synth.v" --include "../../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../../my_bighw.srcs/sim_1/new/screen_top_tb.v" --include "../../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+
+# Do not sort compile order
+nosort

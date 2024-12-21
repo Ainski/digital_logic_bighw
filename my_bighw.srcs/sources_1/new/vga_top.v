@@ -7,19 +7,19 @@ module vga_top(
     input [18:0]wt_addr,
     input wena,
 
-    output rdn,
     output [3:0] r,
     output [3:0] g,
     output [3:0] b,
     output hsync,
     output vsync
-
 );
-    
+    wire [18:0] rd_addr;
+    wire [8:0] data_in;
+    wire rdn;
     vga vga_inst(
         .clk(clk_out),
         .clr_n(clr_n),
-        .data_in(rd_data),
+        .data_in(data_in),
         .rd_addr(rd_addr),
         .rdn(rdn),
         .r(r),
@@ -41,6 +41,6 @@ module vga_top(
         .clkb(clk_out),
         .doutb(data_in),
         .enb(~rdn)
-        );
+     );
    
 endmodule

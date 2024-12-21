@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="vga_ram_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734527699">
-  <File Type="RDS-PROPCONSTRS" Name="vga_ram_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="vga_ram.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="vga_ram_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="vga_ram.vds"/>
   <File Type="RDS-UTIL" Name="vga_ram_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="vga_ram_utilization_synth.pb"/>

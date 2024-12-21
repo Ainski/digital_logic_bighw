@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Dec 18 22:59:19 2024">
+<application name="pa" timeStamp="Sat Dec 21 11:48:16 2024">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="dd95b4d716a34e498cdfdc7826fd3e9b" type="ProjectID"/>
-<property name="ProjectIteration" value="65" type="ProjectIteration"/>
+<property name="ProjectIteration" value="66" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -18,13 +18,13 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Java Command Handlers">
 <property name="AddCfgMem" value="1" type="JavaHandler"/>
-<property name="AddSources" value="7" type="JavaHandler"/>
+<property name="AddSources" value="12" type="JavaHandler"/>
 <property name="AutoConnectTarget" value="13" type="JavaHandler"/>
-<property name="CloseProject" value="4" type="JavaHandler"/>
+<property name="CloseProject" value="6" type="JavaHandler"/>
 <property name="CoreView" value="5" type="JavaHandler"/>
-<property name="CustomizeCore" value="13" type="JavaHandler"/>
+<property name="CustomizeCore" value="14" type="JavaHandler"/>
 <property name="DebugWizardCmdHandler" value="1" type="JavaHandler"/>
-<property name="EditDelete" value="4" type="JavaHandler"/>
+<property name="EditDelete" value="6" type="JavaHandler"/>
 <property name="EditPaste" value="1" type="JavaHandler"/>
 <property name="EditProperties" value="1" type="JavaHandler"/>
 <property name="EditUndo" value="1" type="JavaHandler"/>
@@ -37,57 +37,239 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="OpenHardwareManager" value="59" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="18" type="JavaHandler"/>
 <property name="ProgramDevice" value="37" type="JavaHandler"/>
-<property name="ProjectSettingsCmdHandler" value="8" type="JavaHandler"/>
-<property name="RecustomizeCore" value="22" type="JavaHandler"/>
+<property name="ProjectSettingsCmdHandler" value="12" type="JavaHandler"/>
+<property name="RecustomizeCore" value="30" type="JavaHandler"/>
 <property name="RefreshDevice" value="2" type="JavaHandler"/>
 <property name="RunBitgen" value="65" type="JavaHandler"/>
-<property name="RunImplementation" value="3" type="JavaHandler"/>
-<property name="RunSynthesis" value="18" type="JavaHandler"/>
+<property name="RunImplementation" value="4" type="JavaHandler"/>
+<property name="RunSynthesis" value="19" type="JavaHandler"/>
 <property name="SaveDesign" value="4" type="JavaHandler"/>
+<property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
 <property name="SetSourceEnabled" value="2" type="JavaHandler"/>
 <property name="ShowPropertyEditor" value="2" type="JavaHandler"/>
-<property name="ShowView" value="12" type="JavaHandler"/>
-<property name="SimulationClose" value="7" type="JavaHandler"/>
-<property name="SimulationRestart" value="5" type="JavaHandler"/>
-<property name="SimulationRun" value="34" type="JavaHandler"/>
-<property name="SimulationRunAll" value="37" type="JavaHandler"/>
-<property name="SimulationRunForTime" value="75" type="JavaHandler"/>
+<property name="ShowView" value="13" type="JavaHandler"/>
+<property name="SimulationClose" value="21" type="JavaHandler"/>
+<property name="SimulationRestart" value="26" type="JavaHandler"/>
+<property name="SimulationRun" value="77" type="JavaHandler"/>
+<property name="SimulationRunAll" value="140" type="JavaHandler"/>
+<property name="SimulationRunForTime" value="429" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="4" type="JavaHandler"/>
-<property name="ViewTaskProjectManager" value="31" type="JavaHandler"/>
-<property name="ViewTaskSimulation" value="3" type="JavaHandler"/>
+<property name="ViewTaskProjectManager" value="43" type="JavaHandler"/>
+<property name="ViewTaskSimulation" value="7" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="8" type="JavaHandler"/>
 <property name="XdcCreateClock" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
-<property name="Defines the PortA Write Width(DINA" value="1" type="GuiResourceData"/>
-<property name="Memory Type (Memory_Type" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CmdMsgDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3, 18" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3, 18, Block Memory Generator, 0, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3, 18, Block Memory Generator, 0, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, Memories  Storage Elements ;  ;  ;  ; , 12" value="1" type="GuiResourceData"/>
-<property name="PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, RAMs  ROMs  BRAM ;  ;  ;  ; , 17" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, IP Integrator], 5, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Program and Debug, Hardware Manager, Program Device], 28, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, IP Catalog], 4, false" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.HACGCCoeFileWidget_BROWSE, Browse" value="2" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, Program device" value="1" type="GuiResourceData"/>
-<property name="PAResourceOtoP.ProgramFpgaDialog_PROGRAM, Program" value="1" type="GuiResourceData"/>
-<property name="PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, Generate" value="1" type="GuiResourceData"/>
-<property name="RDIResource.BaseDialog_OK, OK" value="1" type="GuiResourceData"/>
-<property name="Write Depth, 5224288" value="1" type="GuiResourceData"/>
-<property name="Write Depth, 524288" value="1" type="GuiResourceData"/>
-<property name="keyboard.v, 329, 162" value="1" type="GuiResourceData"/>
-<property name="vga_top.v, 348, 228" value="1" type="GuiResourceData"/>
-<property name="vga_top.v, 473, 249" value="1" type="GuiResourceData"/>
-<property name="vga_top.v, 74, 402" value="1" type="GuiResourceData"/>
-<property name="vga_top.v, 75, 420" value="1" type="GuiResourceData"/>
+<property name="FINISH, Finish" value="1" type="GuiResourceData"/>
+<property name="NEXT, Next " value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, (String" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, alu" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, key_translate" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, top" value="1" type="GuiResourceData"/>
+<property name="PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, translate_line" value="1" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RESTART, simulation_live_restart" value="4" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, simulation_live_run_for_time" value="61" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN_ALL, simulation_live_run_all" value="3" type="GuiResourceData"/>
+<property name="PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, Run Behavioral Simulation" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, alu.v], 11, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, alu.v], 11, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, key_translate.v], 9, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, key_translate.v], 9, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, keyboard.v], 5, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, keyboard.v], 5, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, screen_top.v], 6, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, screen_top.v], 6, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, top.v], 8, false" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, top.v], 8, false, false, false, false, false, true" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, translate_line.v], 10, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Verilog, xil_defaultlib, translate_line.v], 10, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager, Add Sources], 2, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Project Manager], 0, true" value="2" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation, Run Simulation], 11, false" value="3" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, [, Simulation], 9, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String" value="1" type="GuiResourceData"/>
+<property name="PAResourceItoN.MsgView_WARNING_MESSAGES, (String" value="3" type="GuiResourceData"/>
+<property name="PAResourceOtoP.PAViews_CODE, Code" value="5" type="GuiResourceData"/>
+<property name="PAResourceQtoS.SrcChooserPanel_CREATE_FILE, Create File" value="4" type="GuiResourceData"/>
+<property name="PAResourceQtoS.StateMonitor_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="PAResourceTtoZ.TaskBanner_CLOSE, (String" value="2" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_CANCEL, Cancel" value="1" type="GuiResourceData"/>
+<property name="RDIResource.BaseDialog_OK, OK" value="7" type="GuiResourceData"/>
+<property name="RDIResource.ProgressDialog_CANCEL, Cancel" value="2" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 176, 498" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 231, 281" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 405, 326" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 51, 367" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 60, 294" value="1" type="GuiResourceData"/>
+<property name="RDIResource.RDIViews_WAVEFORM_VIEWER, 63, 273" value="1" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, b[3:0]], 14" value="2" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, g[3:0]], 9" value="2" type="GuiResourceData"/>
+<property name="RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, [true, r[3:0]], 4" value="2" type="GuiResourceData"/>
+<property name="alu.v, 0, 11" value="1" type="GuiResourceData"/>
+<property name="alu.v, 337, 123" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 100, 212" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 100, 409" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 148, 179" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 148, 191" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 15, 351" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 159, 172" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 160, 197" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 161, 331" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 18, 332" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 186, 183" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 187, 181" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 192, 214" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 201, 333" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 206, 191" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 213, 243" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 22, 332, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 225, 215" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 225, 411" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 226, 349" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 236, 317" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 244, 200" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 244, 326" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 27, 221" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 274, 207" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 38, 309" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 435, 231" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 437, 218" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 449, 215" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 61, 348" value="1" type="GuiResourceData"/>
+<property name="convert_to_vga.v, 66, 196" value="1" type="GuiResourceData"/>
+<property name="key_translate.v, 224, 142" value="1" type="GuiResourceData"/>
+<property name="keyboard.v, 285, 177" value="1" type="GuiResourceData"/>
+<property name="keyboard.v, 321, 138" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 1, 33" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 104, 161" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 124, 121" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 142, 160" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 154, 128" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 165, 268" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 175, 145" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 175, 236" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 176, 88" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 182, 216" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 182, 238" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 185, 180" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 185, 234" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 185, 82" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 185, 84" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 190, 242" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 190, 86" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 192, 198" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 199, 250" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 201, 267" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 222, 302" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 230, 275" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 253, 257" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 27, 313" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 274, 248" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 281, 122" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 282, 252" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 283, 205" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 291, 279" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 293, 302" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 311, 294" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 348, 261" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 354, 252" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 369, 231" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 386, 230" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 387, 279" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 41, 314" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 439, 269" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 471, 241" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 82, 125" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 85, 100" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 89, 122" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 92, 86" value="1" type="GuiResourceData"/>
+<property name="screen_top.v, 99, 5" value="1" type="GuiResourceData"/>
+<property name="top.v, 101, 349" value="1" type="GuiResourceData"/>
+<property name="top.v, 233, 213" value="1" type="GuiResourceData"/>
+<property name="top.v, 328, 151" value="1" type="GuiResourceData"/>
+<property name="top.v, 434, 185" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 100, 121" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 100, 143" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 101, 104" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 103, 159" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 110, 366" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 121, 312" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 127, 166" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 130, 196" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 136, 122" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 138, 158" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 141, 272" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 144, 275" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 151, 423" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 152, 256" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 153, 347" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 153, 348" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 154, 347" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 154, 352" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 154, 373" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 155, 292" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 272" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 312" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 331" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 332" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 385" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 386" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 404" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 156, 424" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 157, 352" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 157, 390" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 157, 392" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 157, 410" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 157, 423" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 158, 371" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 159, 367" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 160, 270" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 165, 364" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 182, 92" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 183, 175" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 184, 179" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 187, 327" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 188, 313" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 197, 185" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 213, 108" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 238, 127" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 251, 255" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 284, 302" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 288, 273" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 300, 268" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 311, 151" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 316, 369" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 319, 277" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 349, 253" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 355, 288" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 422, 318" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 423, 178" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 426, 307" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 448, 286" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 457, 283" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 5, 12" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 514, 202" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 546, 308" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 63, 157" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 64, 119" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 65, 137" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 65, 140" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 67, 160" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 69, 220" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 70, 186" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 71, 371" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 72, 194" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 74, 219" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 85, 215" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 88, 219" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 88, 368" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 92, 199" value="1" type="GuiResourceData"/>
+<property name="translate_line.v, 98, 198" value="1" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="142" type="GuiMode"/>
+<property name="GuiMode" value="146" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="96" type="TclMode"/>
+<property name="TclMode" value="98" type="TclMode"/>
 </item>
 </section>
 </application>
