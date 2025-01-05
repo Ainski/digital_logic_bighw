@@ -4,31 +4,31 @@ module translate_line(
     input           rst,
     input           PS2D,
     input           PS2C,
-    output reg [3:0]  opcode,
-    output  reg  [7:0]  opnum1,
-    output  reg [7:0]opnum2,
+    output  reg [3:0]  opcode,
+    output  reg [7:0]  opnum1,
+    output  reg [7:0]  opnum2,
     output op_ready,
     output reg next_line,
     output reg overflow,
     output [7:0] key_code_out ,
-    output key_ready
+    output reg key_ready
 );
 
-    parameter [23:0] lod_name = 24'h6C6F64;  // 'l' 'o' 'd'
-    parameter [23:0] mov_name = 24'h6D6F76;  // 'm' 'o' 'v'
-    parameter [23:0] add_name = 24'h616464;  // 'a' 'd' 'd'
-    parameter [23:0] sub_name = 24'h737562;  // 's' 'u' 'b'
-    parameter [23:0] xor_name = 24'h786F72;  // 'x' 'o' 'r'
-    parameter [23:0] oor_name = 24'h6F6F72;  // 'o' 'o' 'r'
-    parameter [23:0] and_name = 24'h616E64;  // 'a' 'n' 'd'
-    parameter [23:0] sll_name = 24'h736C6C;  // 's' 'l' 'l'
-    parameter [23:0] srl_name = 24'h73726C;  // 's' 'r' 'l'
-    parameter [23:0] clr_name = 24'h636C72;  // 'c' 'l' 'r'
-    parameter [23:0] rst_name = 24'h727374;  // 'r' 's' 't'
-    parameter [23:0] dsa_name = 24'h647361;  // 'd' 's' 'a'
-    parameter [23:0] equ_name = 24'h657175;  // 'e' 'q' 'u'
-    parameter [23:0] big_name = 24'h626967;  // 'b' 'i' 'g'
-    parameter [23:0] lit_name = 24'h6C6974;  // 'l' 'i' 't'
+parameter [23:0] lod_name = 24'h444F4C;  // 'D' 'O' 'L'
+parameter [23:0] mov_name = 24'h564F4D;  // 'V' 'O' 'M'
+parameter [23:0] add_name = 24'h444441;  // 'D' 'D' 'A'
+parameter [23:0] sub_name = 24'h425553;  // 'B' 'U' 'S'
+parameter [23:0] xor_name = 24'h524F58;  // 'R' 'O' 'X'
+parameter [23:0] oor_name = 24'h524F4F;  // 'R' 'O' 'O'
+parameter [23:0] and_name = 24'h444E41;  // 'D' 'N' 'A'
+parameter [23:0] sll_name = 24'h4C4C53;  // 'L' 'L' 'S'
+parameter [23:0] srl_name = 24'h4C5253;  // 'L' 'R' 'S'
+parameter [23:0] clr_name = 24'h524C43;  // 'R' 'L' 'C'
+parameter [23:0] rst_name = 24'h545352;  // 'T' 'S' 'R'
+parameter [23:0] dsa_name = 24'h415344;  // 'A' 'S' 'D'
+parameter [23:0] equ_name = 24'h555145;  // 'U' 'Q' 'E'
+parameter [23:0] big_name = 24'h474942;  // 'G' 'I' 'B'
+parameter [23:0] lit_name = 24'h54494C;  // 'T' 'I' 'L'
 
     parameter [3:0] lod_code = 4'b0001;
     parameter [3:0] mov_code = 4'b0010;
@@ -49,11 +49,13 @@ module translate_line(
 
     reg [639:0] line_buffer;
     reg [7:0] line_buffer_ptr;
-
+    reg enter=0;
     wire [7:0]key_code;
     assign key_code_out = key_code;
     wire ready;
-    assign ready=key_ready;
+    always@(posedge clk)begin
+        key_ready=ready;
+    end 
 
     reg opcode_ready;
     reg opnum1_ready;
@@ -62,14 +64,14 @@ module translate_line(
     assign op_ready = opcode_ready && opnum1_ready && opnum2_ready;
     key_translate kt(
         .clk(clk),
-        .rst(rst),
         .PS2D(PS2D),
         .PS2C(PS2C),
         .key_code(key_code),
-        . ready_wire(ready)
+        .rst(rst),
+        .ready_wire(ready)
     );
 
-    always@( posedge clk or posedge rst )
+    always@( posedge clk)
     begin
         if( rst )
         begin
@@ -79,20 +81,33 @@ module translate_line(
             opnum1 <= 0;
             opnum2 <= 0;
             opcode_ready <= 0;
+            enter<=0;
+            next_line <= 0;
+            overflow <= 0;
+            key_ready<=0;
         end
         else begin
             if( ready )begin
                 if( key_code == 8'h0d ) begin
-                    line_buffer_ptr <= 0;
-                    line_buffer <= 0;
+
                     opcode <= 0;
                     opnum1 <= 0;
                     opnum2 <= 0;
                     next_line <=1;
                     overflow <= 0;
+                    enter<=1;
                 end
                 else begin
-                    line_buffer[{line_buffer_ptr, 7}:{line_buffer_ptr, 0}]<= key_code;
+                    //line_buffer[{line_buffer_ptr, 7}:{line_buffer_ptr, 0}]<= key_code;
+                    line_buffer[line_buffer_ptr+0]<= key_code[0];
+                    line_buffer[line_buffer_ptr+1]<= key_code[1];
+                    line_buffer[line_buffer_ptr+2]<= key_code[2];
+                    line_buffer[line_buffer_ptr+3]<= key_code[3];
+                    line_buffer[line_buffer_ptr+4]<= key_code[4];
+                    line_buffer[line_buffer_ptr+5]<= key_code[5];
+                    line_buffer[line_buffer_ptr+6]<= key_code[6];
+                    line_buffer[line_buffer_ptr+7]<= key_code[7];
+
                     
                     line_buffer_ptr <= line_buffer_ptr + 8;
                 end
@@ -105,15 +120,19 @@ module translate_line(
                     opcode_ready <= 0;
                     next_line <= 1;
                     overflow <= 1;
+                    enter<=0;
                 end else begin
                     next_line <= 0;
                     overflow <= 0;
+                    enter<=0;
                 end
             end
         end
     end
 
-    always @(posedge op_ready) begin
+    always @(posedge enter) begin
+        line_buffer_ptr <= 0;
+        line_buffer <= 0;
         case(line_buffer[23:0])
             lod_name: begin
                 opcode <= lod_code;

@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Mon Dec 16 17:01:47 2024
-# Process ID: 24160
+# Start of session at: Sun Jan 05 09:48:10 2025
+# Process ID: 4356
 # Current directory: E:/model/my_bighw/my_bighw.runs/clk_wiz_0_synth_1
 # Command line: vivado.exe -log clk_wiz_0.vds -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
 # Log file: E:/model/my_bighw/my_bighw.runs/clk_wiz_0_synth_1/clk_wiz_0.vds

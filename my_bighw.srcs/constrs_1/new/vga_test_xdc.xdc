@@ -34,7 +34,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports vsync]
 
 set_property PACKAGE_PIN E3 [get_ports clk]
 
-create_clock -period 20.000 -name clk_all -waveform {0.000 10.000} -add
+create_clock -period 20.000 -name clk_all -waveform {0.000 10.000}
 
 #set_property CFGBVS VCCO [current_design]          #当 CFGBVS 连接至 Bank 0 的 VCCO 时，Bank 0 的 VCCO 必须为 2.5V 或 3.3V
 #set_property CONFIG_VOLTAGE 3.3 [current_design]   #设置CONFIG_VOLTAGE 也要配置为3.3V
@@ -43,3 +43,48 @@ create_clock -period 20.000 -name clk_all -waveform {0.000 10.000} -add
 #set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]  #设置QSPI的位宽
 #set_property BITSTREAM.CONFIG.SPI_FALL_EDGE Yes [current_design]  #设置QPSI的数据加载时钟边沿
 
+
+set_property IOSTANDARD LVCMOS33 [get_ports PS2C]
+set_property IOSTANDARD LVCMOS33 [get_ports PS2D]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_n]
+set_property PACKAGE_PIN J15 [get_ports rst_n]
+set_property PACKAGE_PIN F4 [get_ports PS2C]
+set_property PACKAGE_PIN B2 [get_ports PS2D]
+
+set_property PACKAGE_PIN E3 [get_ports clk_in]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_in]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {ax[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ax[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ax[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ax[0]}]
+set_property PACKAGE_PIN V11 [get_ports {ax[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {bx[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {bx[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {bx[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {bx[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cx[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cx[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cx[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cx[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dx[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dx[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dx[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dx[0]}]
+set_property PACKAGE_PIN V12 [get_ports {ax[2]}]
+set_property PACKAGE_PIN V14 [get_ports {ax[1]}]
+set_property PACKAGE_PIN V15 [get_ports {ax[0]}]
+set_property PACKAGE_PIN T16 [get_ports {bx[3]}]
+set_property PACKAGE_PIN U14 [get_ports {bx[2]}]
+set_property PACKAGE_PIN T15 [get_ports {bx[1]}]
+set_property PACKAGE_PIN V16 [get_ports {bx[0]}]
+set_property PACKAGE_PIN U16 [get_ports {cx[3]}]
+set_property PACKAGE_PIN U17 [get_ports {cx[2]}]
+set_property PACKAGE_PIN V17 [get_ports {cx[1]}]
+set_property PACKAGE_PIN R18 [get_ports {cx[0]}]
+set_property PACKAGE_PIN N14 [get_ports {dx[3]}]
+set_property PACKAGE_PIN J13 [get_ports {dx[2]}]
+set_property PACKAGE_PIN K15 [get_ports {dx[1]}]
+set_property PACKAGE_PIN H17 [get_ports {dx[0]}]
+set_property PACKAGE_PIN T10 [get_ports cmprs]
+set_property IOSTANDARD LVCMOS33 [get_ports cmprs]

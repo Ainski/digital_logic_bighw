@@ -37,23 +37,34 @@ INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_3_3_mem_module
 INFO: [VRFC 10-311] analyzing module blk_mem_gen_v8_3_3
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/ip/vga_ram_1/sim/vga_ram.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module vga_ram
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PS2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module key_translate
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convert_to_vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module clk_wiz_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/ip/background_rom/sim/background_rom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module background_rom
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module vga
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module vga_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/keyboard.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PS2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module translate_line
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/screen_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module screen_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module convert_to_vga
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sim_1/new/screen_top_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module vga_top_tb
+INFO: [VRFC 10-2458] undeclared symbol wt_en_wire, assumed default net type wire [E:/model/my_bighw/my_bighw.srcs/sources_1/new/screen_top.v:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol test1, assumed default net type wire [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:37]
+INFO: [VRFC 10-2458] undeclared symbol test2, assumed default net type wire [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:38]
+INFO: [VRFC 10-2458] undeclared symbol test3, assumed default net type wire [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:39]
+INFO: [VRFC 10-2458] undeclared symbol test4, assumed default net type wire [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:40]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/model/my_bighw/my_bighw.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Jan 05 00:00:54 2025
+# Process ID: 27248
+# Current directory: E:/model/my_bighw/my_bighw.runs/vga_ram_synth_1
+# Command line: vivado.exe -log vga_ram.vds -mode batch -messageDb vivado.pb -notrace -source vga_ram.tcl
+# Log file: E:/model/my_bighw/my_bighw.runs/vga_ram_synth_1/vga_ram.vds
+# Journal file: E:/model/my_bighw/my_bighw.runs/vga_ram_synth_1\vivado.jou
+#-----------------------------------------------------------
+source vga_ram.tcl -notrace

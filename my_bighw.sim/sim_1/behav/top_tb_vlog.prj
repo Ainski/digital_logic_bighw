@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_base.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dpdistram.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_dprom.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sdpram.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_spram.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_sprom.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+sv xil_defaultlib  "D:/Vivado/2016.2/data/ip/xpm/xpm_memory/hdl/xpm_memory_tdpram.sv" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog blk_mem_gen_v8_3_3  "../../../my_bighw.ip_user_files/ipstatic/blk_mem_gen_v8_3_3/simulation/blk_mem_gen_v8_3.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/ip/vga_ram_1/sim/vga_ram.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/keyboard.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/vga.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/key_translate.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/convert_to_vga.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/vga_top.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/translate_line.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/screen_top.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/alu.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sources_1/new/top.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+verilog xil_defaultlib  "../../../my_bighw.srcs/sim_1/new/top_tb.v" --include "../../../my_bighw.ip_user_files/ipstatic/clk_wiz_v5_3_1"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

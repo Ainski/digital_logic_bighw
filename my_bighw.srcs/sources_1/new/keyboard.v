@@ -75,7 +75,7 @@ begin
     end
     else
     begin
-        shift1 <= { ps2d, shift1[10:1] };
+        shift1 <= { ps2d,shift1[10:1] };
         shift2 <= { shift1[0], shift2[10:1] };         
     end
 end

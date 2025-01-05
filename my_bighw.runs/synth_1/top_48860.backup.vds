@@ -1,0 +1,165 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Jan 03 19:20:05 2025
+# Process ID: 48860
+# Current directory: E:/model/my_bighw/my_bighw.runs/synth_1
+# Command line: vivado.exe -log top.vds -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: E:/model/my_bighw/my_bighw.runs/synth_1/top.vds
+# Journal file: E:/model/my_bighw/my_bighw.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27360 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 307.215 ; gain = 99.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:1]
+	Parameter transtable_0 bound to: 8'b00110000 
+	Parameter transtable_1 bound to: 8'b00110001 
+	Parameter transtable_2 bound to: 8'b00110010 
+	Parameter transtable_3 bound to: 8'b00110011 
+	Parameter transtable_4 bound to: 8'b00110100 
+	Parameter transtable_5 bound to: 8'b00110101 
+	Parameter transtable_6 bound to: 8'b00110110 
+	Parameter transtable_7 bound to: 8'b00110111 
+	Parameter transtable_8 bound to: 8'b00111000 
+	Parameter transtable_9 bound to: 8'b00111001 
+	Parameter transtable_10 bound to: 8'b01000001 
+	Parameter transtable_11 bound to: 8'b01000010 
+	Parameter transtable_12 bound to: 8'b01000011 
+	Parameter transtable_13 bound to: 8'b01000100 
+	Parameter transtable_14 bound to: 8'b01000101 
+	Parameter transtable_15 bound to: 8'b01000110 
+INFO: [Synth 8-638] synthesizing module 'translate_line' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:2]
+	Parameter lod_name bound to: 24'b011011000110111101100100 
+	Parameter mov_name bound to: 24'b011011010110111101110110 
+	Parameter add_name bound to: 24'b011000010110010001100100 
+	Parameter sub_name bound to: 24'b011100110111010101100010 
+	Parameter xor_name bound to: 24'b011110000110111101110010 
+	Parameter oor_name bound to: 24'b011011110110111101110010 
+	Parameter and_name bound to: 24'b011000010110111001100100 
+	Parameter sll_name bound to: 24'b011100110110110001101100 
+	Parameter srl_name bound to: 24'b011100110111001001101100 
+	Parameter clr_name bound to: 24'b011000110110110001110010 
+	Parameter rst_name bound to: 24'b011100100111001101110100 
+	Parameter dsa_name bound to: 24'b011001000111001101100001 
+	Parameter equ_name bound to: 24'b011001010111000101110101 
+	Parameter big_name bound to: 24'b011000100110100101100111 
+	Parameter lit_name bound to: 24'b011011000110100101110100 
+	Parameter lod_code bound to: 4'b0001 
+	Parameter mov_code bound to: 4'b0010 
+	Parameter add_code bound to: 4'b0011 
+	Parameter sub_code bound to: 4'b0100 
+	Parameter xor_code bound to: 4'b0101 
+	Parameter oor_code bound to: 4'b0110 
+	Parameter and_code bound to: 4'b0111 
+	Parameter sll_code bound to: 4'b1000 
+	Parameter srl_code bound to: 4'b1001 
+	Parameter clr_code bound to: 4'b1010 
+	Parameter rst_code bound to: 4'b1011 
+	Parameter dsa_code bound to: 4'b1100 
+	Parameter equ_code bound to: 4'b1101 
+	Parameter big_code bound to: 4'b1110 
+	Parameter lit_code bound to: 4'b1111 
+INFO: [Synth 8-638] synthesizing module 'key_translate' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v:1]
+INFO: [Synth 8-638] synthesizing module 'PS2' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/keyboard.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PS2' (1#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/keyboard.v:23]
+INFO: [Synth 8-256] done synthesizing module 'key_translate' (2#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v:1]
+WARNING: [Synth 8-5788] Register next_line_reg in module translate_line is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:90]
+WARNING: [Synth 8-5788] Register overflow_reg in module translate_line is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:91]
+WARNING: [Synth 8-3848] Net key_ready in module/entity translate_line does not have driver. [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:14]
+INFO: [Synth 8-256] done synthesizing module 'translate_line' (3#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:2]
+ERROR: [Synth 8-448] named port connection 'rst_n' does not exist for instance 'tl' of module 'translate_line' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:32]
+WARNING: [Synth 8-689] width (8) of port connection 'opcode' does not match port width (4) of module 'translate_line' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:36]
+ERROR: [Synth 8-448] named port connection 'key_code' does not exist for instance 'tl' of module 'translate_line' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:41]
+INFO: [Synth 8-638] synthesizing module 'alu' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:2]
+	Parameter lod_code bound to: 4'b0001 
+	Parameter mov_code bound to: 4'b0010 
+	Parameter add_code bound to: 4'b0011 
+	Parameter sub_code bound to: 4'b0100 
+	Parameter xor_code bound to: 4'b0101 
+	Parameter oor_code bound to: 4'b0110 
+	Parameter and_code bound to: 4'b0111 
+	Parameter sll_code bound to: 4'b1000 
+	Parameter srl_code bound to: 4'b1001 
+	Parameter clr_code bound to: 4'b1010 
+	Parameter rst_code bound to: 4'b1011 
+	Parameter dsa_code bound to: 4'b1100 
+	Parameter equ_code bound to: 4'b1101 
+	Parameter big_code bound to: 4'b1110 
+	Parameter lit_code bound to: 4'b1111 
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:38]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:52]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:60]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:68]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:76]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:50]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:90]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:98]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:106]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:114]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:88]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:128]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:136]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:144]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:152]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:126]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:166]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:174]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:182]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:190]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:164]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:204]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:212]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:220]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:228]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:202]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:242]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:250]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:258]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:266]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:240]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:280]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:288]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:296]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:304]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:278]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:318]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:326]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:334]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:342]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:316]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:373]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:381]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:389]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:397]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:371]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:412]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:420]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:428]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:436]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:410]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:450]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:458]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:466]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:474]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:448]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:36]
+ERROR: [Synth 8-285] failed synthesizing module 'alu' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:2]
+ERROR: [Synth 8-285] failed synthesizing module 'top' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 344.648 ; gain = 137.102
+---------------------------------------------------------------------------------
+INFO: Vivado Synthesis caught shared memory exception '系统找不到指定的文件。'. Continuing without using shared memory (or continuing without parallel flow)
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 4 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 03 19:20:10 2025...

@@ -3,8 +3,8 @@ module screen_top(
     input wire clk_out,
     input wire rst_n,
     input wire rst_scrn_bfr,
-    input [7:0] wt_data_in,
-    input wt_en,
+    input wire [7:0] wt_data_in,
+    input wire wt_en,
     input wire clr_n,
     input wire next_line,
     output [3:0] r,
@@ -19,12 +19,13 @@ module screen_top(
     reg this_next_line;
     reg last_next_line;
     wire next_line_wire;
-    assign next_line_wire =this_next_line&&~last_next_line;
+    assign next_line_wire =this_next_line&~last_next_line;
 
     reg this_wt_en;
     reg last_wt_en;
     wire wt_en_vga_wire;
-    assign wt_en_vga_wire = this_wt_en&&~last_wt_en;
+    assign wt_en_wire = ~this_wt_en&last_wt_en;
+    reg wt_en_reg=0;
 
     reg [6:0]scrn_bfr_col=0;
     reg [4:0]scrn_bfr_row=0;
@@ -36,16 +37,16 @@ module screen_top(
     assign scrn_bfr_col_wire = scrn_bfr_col;
     assign scrn_bfr_row_wire = scrn_bfr_row;
     
-    wire wt_en_vga_wire;
+
     wire [18:0] wt_addr_vga_out_wire;
     wire [8:0] wt_data_out_wire;
 
-    wire [18:0] bg_rom_addr_wire;
 
-    wire [8:0] bg_rom_data_wire;
+
+
     
     wire [8:0] test;
-    assign rst_n_wire = rst_n_reg&&rst_n;
+    assign rst_n_wire = rst_n_reg&rst_n;
 
     always @ (posedge clk_out) begin
         if(rst_n)begin
@@ -85,12 +86,12 @@ module screen_top(
     end
 
     always @ (posedge clk_out )begin
-        if(rst_n&&wt_en_vga_wire)begin
+        if(rst_n&wt_en_wire)begin
             if(next_line_wire)begin
                 if(scrn_bfr_row==29)begin
                     scrn_bfr_col <= 0;
                     scrn_bfr_row <= 0;
-                    rst_n_reg <= 0;
+                    rst_n_reg <= 1;
                 end else begin
                     scrn_bfr_col <= 0;
                     scrn_bfr_row <= scrn_bfr_row + 1;
@@ -120,17 +121,13 @@ module screen_top(
     end
 
 
-    assign test=bg_rom_data_wire;
-    background_rom bg_rom(
-        .addra(bg_rom_addr_wire),
-        .clka(clk_out),
-        .douta(bg_rom_data_wire)
-    );
+
+
 
 
     vga_top vga_top_inst(
         .clk_out(clk_out),
-        .clr_n(clr_n),
+        .clr_n(rst_n),
         .wt_data(wt_data_out_wire),
         .wena(wt_en_vga_wire),
         .wt_addr(wt_addr_vga_out_wire),
@@ -143,18 +140,18 @@ module screen_top(
     convert_to_vga convert_to_vga_inst(
         .clk_out(clk_out),
         .rst_n(rst_n_wire),
-        .wt_en(wt_en),
+        .wt_en(wt_en_wire),
 
         .scrn_bfr_col(scrn_bfr_col_wire),
         .scrn_bfr_row(scrn_bfr_row_wire),
         .wt_data_in(wt_data_in),
 
-        .wt_en_vga(wt_en_vga_wire),
+        .wt_en_vga_reg(wt_en_vga_wire),
         .wt_addr_vga_out(wt_addr_vga_out_wire),
         .wt_data_out(wt_data_out_wire),
 
-        .bg_rom_addr(bg_rom_addr_wire),
-        .bg_rom_data(bg_rom_data_wire)
+
+        .bg_rom_data(9'b010010010)
     );
 
 endmodule

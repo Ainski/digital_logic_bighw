@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log vga_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source vga_top.tcl
+    with args -log top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top.tcl
 
 
 ****** Vivado v2016.2 (64-bit)
@@ -8,20 +8,132 @@
   **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source vga_top.tcl -notrace
-Command: synth_design -top vga_top -part xc7a100tcsg324-1
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5956 
+INFO: Helper process launched with PID 2668 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 306.383 ; gain = 99.277
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 306.484 ; gain = 99.465
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:2]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'translate_line' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:2]
+	Parameter lod_name bound to: 24'b010001000100111101001100 
+	Parameter mov_name bound to: 24'b010101100100111101001101 
+	Parameter add_name bound to: 24'b010001000100010001000001 
+	Parameter sub_name bound to: 24'b010000100101010101010011 
+	Parameter xor_name bound to: 24'b010100100100111101011000 
+	Parameter oor_name bound to: 24'b010100100100111101001111 
+	Parameter and_name bound to: 24'b010001000100111001000001 
+	Parameter sll_name bound to: 24'b010011000100110001010011 
+	Parameter srl_name bound to: 24'b010011000101001001010011 
+	Parameter clr_name bound to: 24'b010100100100110001000011 
+	Parameter rst_name bound to: 24'b010101000101001101010010 
+	Parameter dsa_name bound to: 24'b010000010101001101000100 
+	Parameter equ_name bound to: 24'b010101010101000101000101 
+	Parameter big_name bound to: 24'b010001110100100101000010 
+	Parameter lit_name bound to: 24'b010101000100100101001100 
+	Parameter lod_code bound to: 4'b0001 
+	Parameter mov_code bound to: 4'b0010 
+	Parameter add_code bound to: 4'b0011 
+	Parameter sub_code bound to: 4'b0100 
+	Parameter xor_code bound to: 4'b0101 
+	Parameter oor_code bound to: 4'b0110 
+	Parameter and_code bound to: 4'b0111 
+	Parameter sll_code bound to: 4'b1000 
+	Parameter srl_code bound to: 4'b1001 
+	Parameter clr_code bound to: 4'b1010 
+	Parameter rst_code bound to: 4'b1011 
+	Parameter dsa_code bound to: 4'b1100 
+	Parameter equ_code bound to: 4'b1101 
+	Parameter big_code bound to: 4'b1110 
+	Parameter lit_code bound to: 4'b1111 
+INFO: [Synth 8-638] synthesizing module 'key_translate' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v:2]
+INFO: [Synth 8-638] synthesizing module 'PS2' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/keyboard.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PS2' (2#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/keyboard.v:23]
+INFO: [Synth 8-256] done synthesizing module 'key_translate' (3#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v:2]
+INFO: [Synth 8-256] done synthesizing module 'translate_line' (4#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:2]
+INFO: [Synth 8-638] synthesizing module 'alu' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:2]
+	Parameter lod_code bound to: 4'b0001 
+	Parameter mov_code bound to: 4'b0010 
+	Parameter add_code bound to: 4'b0011 
+	Parameter sub_code bound to: 4'b0100 
+	Parameter xor_code bound to: 4'b0101 
+	Parameter oor_code bound to: 4'b0110 
+	Parameter and_code bound to: 4'b0111 
+	Parameter sll_code bound to: 4'b1000 
+	Parameter srl_code bound to: 4'b1001 
+	Parameter clr_code bound to: 4'b1010 
+	Parameter rst_code bound to: 4'b1011 
+	Parameter dsa_code bound to: 4'b1100 
+	Parameter equ_code bound to: 4'b1101 
+	Parameter big_code bound to: 4'b1110 
+	Parameter lit_code bound to: 4'b1111 
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:47]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:61]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:69]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:77]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:85]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:59]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:99]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:107]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:115]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:123]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:97]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:137]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:145]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:153]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:161]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:135]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:175]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:183]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:191]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:199]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:173]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:213]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:221]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:229]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:237]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:211]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:251]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:259]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:267]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:275]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:249]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:289]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:297]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:305]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:313]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:287]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:327]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:335]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:343]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:351]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:325]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:382]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:390]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:398]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:406]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:380]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:421]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:429]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:437]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:445]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:419]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:459]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:467]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:475]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:483]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:457]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:45]
+INFO: [Synth 8-256] done synthesizing module 'alu' (5#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:2]
+WARNING: [Synth 8-689] width (4) of port connection 'opcode' does not match port width (8) of module 'alu' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:59]
+INFO: [Synth 8-638] synthesizing module 'screen_top' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/screen_top.v:2]
 INFO: [Synth 8-638] synthesizing module 'vga_top' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v:2]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (1#1) [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/realtime/clk_wiz_0_stub.v:5]
-WARNING: [Synth 8-350] instance 'clk_inst' of module 'clk_wiz_0' requires 4 connections, but only 2 given [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v:34]
 INFO: [Synth 8-638] synthesizing module 'vga' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga.v:2]
 	Parameter H_RES bound to: 640 - type: integer 
 	Parameter H_FP bound to: 16 - type: integer 
@@ -33,12 +145,112 @@ INFO: [Synth 8-638] synthesizing module 'vga' [E:/model/my_bighw/my_bighw.srcs/s
 	Parameter V_SYNC bound to: 2 - type: integer 
 	Parameter V_BP bound to: 33 - type: integer 
 	Parameter V_ALL bound to: 525 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'vga' (2#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga.v:2]
-INFO: [Synth 8-638] synthesizing module 'vga_ram' [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/realtime/vga_ram_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'vga_ram' (3#1) [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/realtime/vga_ram_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'vga_top' (4#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v:2]
+INFO: [Synth 8-256] done synthesizing module 'vga' (6#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga.v:2]
+INFO: [Synth 8-638] synthesizing module 'vga_ram' [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/realtime/vga_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'vga_ram' (7#1) [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/realtime/vga_ram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'vga_top' (8#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v:2]
+INFO: [Synth 8-638] synthesizing module 'convert_to_vga' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:2]
+	Parameter FONT_0 bound to: 128'b00000000000000000000000000000000000111000011011001100011011000110110101101101011011000110110001100110110000111000000000000001111 
+	Parameter FONT_1 bound to: 128'b00000000000000000000000000000000011111100001100000011000000110000001100000011000000110000001111000011100000110000000000000000000 
+	Parameter FONT_2 bound to: 128'b00000000000000000000000000000000011111110110001100000011000001100000110000011000001100000110000001100011001111100000000000000000 
+	Parameter FONT_3 bound to: 128'b00000000000000000000000000000000001111100110001101100000011000000110000000111100011000000110000001100011001111100000000000000000 
+	Parameter FONT_4 bound to: 128'b00000000000000000000000000000000011110000011000000110000001100000111111100110011001101100011110000111000001100000000000000000000 
+	Parameter FONT_5 bound to: 128'b00000000000000000000000000000000001111100110001101100000011000000110000000111111000000110000001100000011011111110000000000000000 
+	Parameter FONT_6 bound to: 128'b00000000000000000000000000000000001111100110001101100011011000110110001100111111000000110000001100000110000111000000000000000000 
+	Parameter FONT_7 bound to: 128'b00000000000000000000000000000000000011000000110000001100000011000001100000110000011000000110000001100011011111110000000000000000 
+	Parameter FONT_8 bound to: 128'b00000000000000000000000000000000001111100110001101100011011000110110001100111110011000110110001101100011001111100000000000000000 
+	Parameter FONT_9 bound to: 128'b00000000000000000000000000000000000111100011000001100000011000000110000001111110011000110110001101100011001111100000000000000000 
+	Parameter FONT_a bound to: 128'b00000000000000000000000000000000011011100011001100110011001100110011111000110000000111100000000000000000000000000000000000000000 
+	Parameter FONT_b bound to: 128'b00000000000000000000000000000000001111100110011001100110011001100110011000110110000111100000011000000110000001110000000000000000 
+	Parameter FONT_c bound to: 128'b00000000000000000000000000000000001111100110001100000011000000110000001101100011001111100000000000000000000000000000000000000000 
+	Parameter FONT_d bound to: 128'b00000000000000000000000000000000011011100011001100110011001100110011001100110110001111000011000000110000001110000000000000000000 
+	Parameter FONT_e bound to: 128'b00000000000000000000000000000000001111100110001100000011000000110111111101100011001111100000000000000000000000000000000000000000 
+	Parameter FONT_f bound to: 128'b00000000000000000000000000000000000011110000011000000110000001100000011000001111000001100010011000110110000111000000000000000000 
+	Parameter FONT_g bound to: 128'b00000000000111100011001100110000001111100011001100110011001100110011001100110011011011100000000000000000000000000000000000000000 
+	Parameter FONT_h bound to: 128'b00000000000000000000000000000000011001110110011001100110011001100110011001101110001101100000011000000110000001110000000000000000 
+	Parameter FONT_i bound to: 128'b00000000000000000000000000000000001111000001100000011000000110000001100000011000000111000000000000011000000110000000000000000000 
+	Parameter FONT_j bound to: 128'b00000000001111000110011001100110011000000110000001100000011000000110000001100000011100000000000001100000011000000000000000000000 
+	Parameter FONT_k bound to: 128'b00000000000000000000000000000000011001110110011000110110000111100001111000110110011001100000011000000110000001110000000000000000 
+	Parameter FONT_l bound to: 128'b00000000000000000000000000000000001111000001100000011000000110000001100000011000000110000001100000011000000111000000000000000000 
+	Parameter FONT_m bound to: 128'b00000000000000000000000000000000011000110110101101101011011010110110101101111111001101110000000000000000000000000000000000000000 
+	Parameter FONT_n bound to: 128'b00000000000000000000000000000000011001100110011001100110011001100110011001100110001110110000000000000000000000000000000000000000 
+	Parameter FONT_o bound to: 128'b00000000000000000000000000000000001111100110001101100011011000110110001101100011001111100000000000000000000000000000000000000000 
+	Parameter FONT_p bound to: 128'b00000000000011110000011000000110001111100110011001100110011001100110011001100110001110110000000000000000000000000000000000000000 
+	Parameter FONT_q bound to: 128'b00000000011110000011000000110000001111100011001100110011001100110011001100110011011011100000000000000000000000000000000000000000 
+	Parameter FONT_r bound to: 128'b00000000000000000000000000000000000011110000011000000110000001100110011001101110001110110000000000000000000000000000000000000000 
+	Parameter FONT_s bound to: 128'b00000000000000000000000000000000001111100110001100110000000111000000011001100011001111100000000000000000000000000000000000000000 
+	Parameter FONT_t bound to: 128'b00000000000000000000000000000000001110000110110000001100000011000000110000001100001111110000110000001100000010000000000000000000 
+	Parameter FONT_u bound to: 128'b00000000000000000000000000000000011011100011001100110011001100110011001100110011001100110000000000000000000000000000000000000000 
+	Parameter FONT_v bound to: 128'b00000000000000000000000000000000000110000011110001100110011001100110011001100110011001100000000000000000000000000000000000000000 
+	Parameter FONT_w bound to: 128'b00000000000000000000000000000000001101100111111101101011011010110110101101100011011000110000000000000000000000000000000000000000 
+	Parameter FONT_x bound to: 128'b00000000000000000000000000000000011000110011011000011100000111000001110000110110011000110000000000000000000000000000000000000000 
+	Parameter FONT_y bound to: 128'b00000000000111110011000001100000011111100110001101100011011000110110001101100011011000110000000000000000000000000000000000000000 
+	Parameter FONT_z bound to: 128'b00000000000000000000000000000000011111110110001100000110000011000001100000110011011111110000000000000000000000000000000000000000 
+	Parameter FONT_A bound to: 128'b00000000000000000000000000000000011000110110001101100011011000110111111101100011011000110011011000011100000010000000000000000000 
+	Parameter FONT_B bound to: 128'b00000000000000000000000000000000001111110110011001100110011001100110011000111110011001100110011001100110001111110000000000000000 
+	Parameter FONT_C bound to: 128'b00000000000000000000000000000000001111000110011001000011000000110000001100000011000000110100001101100110001111000000000000000000 
+	Parameter FONT_D bound to: 128'b00000000000000000000000000000000000111110011011001100110011001100110011001100110011001100110011000110110000111110000000000000000 
+	Parameter FONT_E bound to: 128'b00000000000000000000000000000000011111110110011001000110000001100001011000011110000101100100011001100110011111110000000000000000 
+	Parameter FONT_F bound to: 128'b00000000000000000000000000000000000011110000011000000110000001100001011000011110000101100100011001100110011111110000000000000000 
+	Parameter FONT_G bound to: 128'b00000000000000000000000000000000010111000110011001100011011000110111101100000011000000110100001101100110001111000000000000000000 
+	Parameter FONT_H bound to: 128'b00000000000000000000000000000000011000110110001101100011011000110110001101111111011000110110001101100011011000110000000000000000 
+	Parameter FONT_I bound to: 128'b00000000000000000000000000000000001111000001100000011000000110000001100000011000000110000001100000011000001111000000000000000000 
+	Parameter FONT_J bound to: 128'b00000000000000000000000000000000000111100011001100110011001100110011000000110000001100000011000000110000011110000000000000000000 
+	Parameter FONT_K bound to: 128'b00000000000000000000000000000000011001110110011001100110001101100001111000011110001101100110011001100110011001110000000000000000 
+	Parameter FONT_L bound to: 128'b00000000000000000000000000000000011111110110011001000110000001100000011000000110000001100000011000000110000011110000000000000000 
+	Parameter FONT_M bound to: 128'b00000000000000000000000000000000011000110110001101100011011000110110001101101011011111110111111101110111011000110000000011111111 
+	Parameter FONT_N bound to: 128'b00000000000000000000000000000000011000110110001101100011011000110111001101111011011111110110111101100111011000110000000000000000 
+	Parameter FONT_O bound to: 128'b00000000000000000000000000000000001111100110001101100011011000110110001101100011011000110110001101100011001111100000000000000000 
+	Parameter FONT_P bound to: 128'b00000000000000000000000000000000000011110000011000000110000001100000011000111110011001100110011001100110001111110000000000000000 
+	Parameter FONT_Q bound to: 128'b00000000000000000111000000110000001111100111101101101011011000110110001101100011011000110110001101100011001111100000000000000000 
+	Parameter FONT_R bound to: 128'b00000000000000000000000000000000011001110110011001100110011001100011011000111110011001100110011001100110001111110000000000000000 
+	Parameter FONT_S bound to: 128'b00000000000000000000000000000000001111100110001101100011011000000011000000011100000001100110001101100011001111100000000000000000 
+	Parameter FONT_T bound to: 128'b00000000000000000000000000000000001111000001100000011000000110000001100000011000000110000101101001111110011111100000000000000000 
+	Parameter FONT_U bound to: 128'b00000000000000000000000000000000001111100110001101100011011000110110001101100011011000110110001101100011011000110000000000000000 
+	Parameter FONT_V bound to: 128'b00000000000000000000000000000000000010000001110000110110011000110110001101100011011000110110001101100011011000110000000000000000 
+	Parameter FONT_W bound to: 128'b00000000000000000000000000000000001101100111011101111111011010110110101101101011011000110110001101100011011000110000000000000000 
+	Parameter FONT_X bound to: 128'b00000000000000000000000000000000011000110110001100110110001111100001110000011100001111100011011001100011011000110000000000000000 
+	Parameter FONT_Y bound to: 128'b00000000000000000000000000000000001111000001100000011000000110000001100000111100011001100110011001100110011001100000000000000000 
+	Parameter FONT_Z bound to: 128'b00000000000000000000000000000000011111110110001101000011000001100000110000011000001100000110000101100011011111110000000000000000 
+	Parameter FONT_SPACE bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter FONT_EXCLAMATION bound to: 128'b00000000000000000000000000000000000110000001100000000000000110000001100000011000001111000011110000111100000110000000000000000000 
+	Parameter FONT_TILDE bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111011011011100000000000000000 
+	Parameter FONT_AT bound to: 128'b00000000000000000000000000000000001111100000001100111011011110110111101101111011011000110110001100111110000000000000000000000000 
+	Parameter FONT_HASH bound to: 128'b00000000000000000000000000000000001101100011011001111111001101100011011000110110011111110011011000110110000000000000000000000000 
+	Parameter FONT_DOLLAR bound to: 128'b00000000000000000001100000011000001111100110001101100001011000000110000000111110000000110100001101100011001111100001100000011000 
+	Parameter FONT_PERCENT bound to: 128'b00000000000000000000000000000000000000000110000101100011000001100000110000011000001100000110001101000011000000000000000000000000 
+	Parameter FONT_CARET bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100011001101100001110000001000 
+	Parameter FONT_AMPERSAND bound to: 128'b00000000000000000000000000000000011011100011001100110011001100110011101101101110000111000011011000110110000111000000000000000000 
+	Parameter FONT_ASTERISK bound to: 128'b00000000000000000000000000000000000000000000000000000000000010000110101100011100000111000110101100001000000000000000000000000000 
+	Parameter FONT_LPAREN bound to: 128'b00000000000000000000000000000000001100000001100000001100000011000000110000001100000011000000110000011000001100000000000000000000 
+	Parameter FONT_RPAREN bound to: 128'b00000000000000000000000000000000000011000001100000110000001100000011000000110000001100000011000000011000000011000000000000000000 
+	Parameter FONT_UNDERSCORE bound to: 128'b00000000000000001111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter FONT_PLUS bound to: 128'b00000000000000000000000000000000000000000000000000011000000110000111111000011000000110000000000000000000000000000000000000000000 
+	Parameter FONT_MINUS bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000000 
+	Parameter FONT_EQUAL bound to: 128'b00000000000000000000000000000000000000000000000000000000011111100000000000000000011111100000000000000000000000000000000000000000 
+	Parameter FONT_LBRACKET bound to: 128'b00000000000000000000000000000000001111000000110000001100000011000000110000001100000011000000110000001100001111000000000000000000 
+	Parameter FONT_RBRACKET bound to: 128'b00000000000000000000000000000000001111000011000000110000001100000011000000110000001100000011000000110000001111000000000000000000 
+	Parameter FONT_BACKSLASH bound to: 128'b00000000000000000000000000000000000000000100000001100000011100000011100000011100000011100000011100000011000000010000000000000000 
+	Parameter FONT_SEMICOLON bound to: 128'b00000000000000000000000000000000000000000001100000011000000000000000000000000000000110000001100000000000000000000000000000000000 
+	Parameter FONT_APOSTROPHE bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000001100000011000000000000000000 
+	Parameter FONT_COMMA bound to: 128'b00000000000000000000000000001100000110000001100000011000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter FONT_PERIOD bound to: 128'b00000000000000000000000000000000000110000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter FONT_SLASH bound to: 128'b00000000000000000000000000000000000000010000001100000110000011000001100000110000011000000100000000000000000000000000000000000000 
+	Parameter FONT_LBRACE bound to: 128'b00000000000000000000000000000000011100000001100000011000000110000001100000001110000110000001100000011000011100000000000000000000 
+	Parameter FONT_RBRACE bound to: 128'b00000000000000000000000000000000000011100001100000011000000110000001100001110000000110000001100000011000000011100000000000000000 
+	Parameter FONT_PIPE bound to: 128'b00000000000000000000000000000000000110000001100000011000000110000001100000000000000110000001100000011000000110000000000000000000 
+	Parameter FONT_COLON bound to: 128'b00000000000000000000000000000000000000000001100000011000000000000000000000000000000110000001100000000000000000000000000000000000 
+	Parameter FONT_QUOTE bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000001100000011000000000000000000 
+	Parameter FONT_LESS bound to: 128'b00000000000000000000000000000000011000000011000000011000000011000000011000001100000110000011000001100000000000000000000000000000 
+	Parameter FONT_GREATER bound to: 128'b00000000000000000000000000000000000001100000110000011000001100000110000000110000000110000000110000000110000000000000000000000000 
+	Parameter FONT_QUESTION bound to: 128'b00000000000000000000000000000000000110000001100000000000000110000001100000011000001100000110001101100011001111100000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'convert_to_vga' (9#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:2]
+WARNING: [Synth 8-350] instance 'convert_to_vga_inst' of module 'convert_to_vga' requires 11 connections, but only 10 given [E:/model/my_bighw/my_bighw.srcs/sources_1/new/screen_top.v:140]
+INFO: [Synth 8-256] done synthesizing module 'screen_top' (10#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/screen_top.v:2]
+INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:2]
+WARNING: [Synth 8-3331] design screen_top has unconnected port clr_n
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 343.871 ; gain = 136.766
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 348.266 ; gain = 141.246
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -48,53 +260,93 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 343.871 ; gain = 136.766
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 348.266 ; gain = 141.246
 ---------------------------------------------------------------------------------
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clk_inst' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v:34]
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'vga_ram' instantiated as 'vga_ram_inst' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v:53]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_0' instantiated as 'clk_w' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:21]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'vga_ram' instantiated as 'st/vga_top_inst/vga_ram_inst' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/vga_top.v:40]
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/dcp/vga_ram_in_context.xdc] for cell 'vga_ram_inst'
-Finished Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/dcp/vga_ram_in_context.xdc] for cell 'vga_ram_inst'
-Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc] for cell 'clk_inst'
-Finished Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc] for cell 'clk_inst'
+Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/dcp/vga_ram_in_context.xdc] for cell 'st/vga_top_inst/vga_ram_inst'
+Finished Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/dcp/vga_ram_in_context.xdc] for cell 'st/vga_top_inst/vga_ram_inst'
+Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc] for cell 'clk_w'
+Finished Parsing XDC File [E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc] for cell 'clk_w'
 Parsing XDC File [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'clr_n'. [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'rdn'. [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'clr_n'. [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'rdn'. [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc:35]
 INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_all' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc:37]
 Finished Parsing XDC File [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_top_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/vga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/model/my_bighw/my_bighw.srcs/constrs_1/new/vga_test_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 648.313 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'vga_ram_inst' at clock pin 'clka' is different from the actual clock period '10.000', this can result in different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 665.695 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'st/vga_top_inst/vga_ram_inst' at clock pin 'clka' is different from the actual clock period '19.841', this can result in different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6936-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in. (constraint file  E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in. (constraint file  E:/model/my_bighw/my_bighw.runs/synth_1/.Xil/Vivado-6760-Nicolas-ainski/dcp_2/clk_wiz_0_in_context.xdc, line 4).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "ps2c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2d" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_code" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'next_line_reg' into 'enter_reg' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:85]
+INFO: [Synth 8-4471] merging register 'overflow_reg' into 'enter_reg' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:86]
+INFO: [Synth 8-5546] ROM "line_buffer_ptr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opcode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opcode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opcode_ready" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opnum1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opnum2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opnum2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:145]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:153]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:161]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [E:/model/my_bighw/my_bighw.srcs/sources_1/new/alu.v:137]
+INFO: [Synth 8-5546] ROM "a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "a" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "b" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "d" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "d" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dspa" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clrs" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "v_count" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "row" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bg_rom_addr_row_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_rst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "letter_row" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "letter_ena" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "font_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "scrn_bfr_row" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rst_n_reg" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -107,17 +359,49 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 3     
-	   2 Input      9 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 10    
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 7     
+	   3 Input      4 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      4 Bit         XORs := 6     
 +---Registers : 
 	               10 Bit    Registers := 1     
-	                9 Bit    Registers := 4     
-	                1 Bit    Registers := 2     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
 +---Muxes : 
-	   2 Input     33 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 12    
+	   2 Input    640 Bit        Muxes := 2     
+	   2 Input    119 Bit        Muxes := 1     
+	   3 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	  39 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 2     
+	  17 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	  39 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 5     
+	  17 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 29    
+	   2 Input      3 Bit        Muxes := 1     
+	  16 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 60    
+	  39 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 34    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -125,17 +409,61 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module vga_top 
+Module PS2 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module key_translate 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  39 Input      8 Bit        Muxes := 1     
+	  39 Input      6 Bit        Muxes := 1     
+	  39 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module translate_line 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 7     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	                9 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     33 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 11    
+	   2 Input    640 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 2     
+	  17 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	  17 Input      4 Bit        Muxes := 1     
+	  16 Input      2 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 6     
+	   3 Input      4 Bit       Adders := 4     
++---XORs : 
+	   2 Input      4 Bit         XORs := 6     
++---Registers : 
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 29    
+	   2 Input      1 Bit        Muxes := 40    
+	   4 Input      1 Bit        Muxes := 33    
+	  16 Input      1 Bit        Muxes := 5     
 Module vga 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -148,6 +476,38 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 1     
+Module convert_to_vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    119 Bit        Muxes := 1     
+	   3 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+Module screen_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -160,16 +520,27 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 648.313 ; gain = 441.207
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "v_count" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "row" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2d0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2/ps2d" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2c0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ps2/ps2c" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_code" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opcode_ready" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opnum2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opcode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "opcode" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "line_buffer_ptr" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bg_rom_addr_row_reg" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_rst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "st/vga_top_inst/vga_inst/v_count" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Parallel Reinference  : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 665.695 ; gain = 458.676
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -179,10 +550,318 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'st/convert_to_vga_inst/letter_data_reg_reg[0]' (FDRE) to 'st/convert_to_vga_inst/letter_data_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'st/convert_to_vga_inst/letter_data_reg_reg[3]' (FDRE) to 'st/convert_to_vga_inst/letter_data_reg_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\st/convert_to_vga_inst/letter_data_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (tl/enter_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (tl/kt/\key_code_reg[7] )
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[10]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[9]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[8]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[7]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[6]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[5]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[4]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[3]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[2]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[1]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift1_reg[0]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[10]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[9]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[8]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[7]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[6]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[5]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[4]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[3]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[2]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[1]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/shift2_reg[0]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ready_reg) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ready_reg__0) is unused and will be removed from module key_translate.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/kt/ready_reg__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v:14]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v:14]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/key_translate.v:14]
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[7]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[6]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[5]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[4]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[3]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[2]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[1]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_fliter_reg[0]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2d_reg) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[7]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[6]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[5]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[4]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[3]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[2]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[1]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_fliter_reg[0]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ps2/ps2c_reg) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[7]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[6]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[5]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[4]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[3]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[2]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[1]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (key_code_reg[0]) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (ready_last_reg) is unused and will be removed from module key_translate.
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[3]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[2]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[1]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[0]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[3]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opcode_reg[3]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[2]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opcode_reg[2]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[1]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opcode_reg[1]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+WARNING: [Synth 8-3332] Sequential element (opcode_reg[0]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opcode_reg[0]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:80]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[7]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[6]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[5]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[4]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[3]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[2]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[1]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[0]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[7]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[7]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[6]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[6]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[5]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[5]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[4]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[4]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[3]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[3]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[2]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[2]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[1]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[1]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum1_reg[0]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum1_reg[0]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:81]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[7]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[6]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[5]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[4]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[3]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[2]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[1]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[0]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[7]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[7]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[6]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[6]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[5]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[5]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[4]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[4]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[3]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[3]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[2]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[2]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[1]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[1]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (opnum2_reg[0]__0) is unused and will be removed from module translate_line.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/opnum2_reg[0]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:82]
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[639]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[638]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[637]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[636]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[635]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[634]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[633]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[632]) is unused and will be removed from module translate_line.
+WARNING: [Synth 8-3332] Sequential element (line_buffer_reg[631]) is unused and will be removed from module translate_line.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[55]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[54]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[53]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[52]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[51]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[50]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[49]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[48]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[39]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[38]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[37]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[36]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[35]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[34]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[33]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[32]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[23]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[22]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[21]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[20]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[19]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[18]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[17]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[16]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[15]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[14]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[13]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[12]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'tl/line_buffer_reg[11]__0/Q' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:79]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:64]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:87]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/translate_line.v:78]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:135]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:141]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [E:/model/my_bighw/my_bighw.srcs/sources_1/new/convert_to_vga.v:142]
+INFO: [Common 17-14] Message 'Synth 8-5559' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 665.695 ; gain = 458.676
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -195,13 +874,13 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_inst/clk_out1' to pin 'clk_inst/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_w/clk_out1' to pin 'clk_w/bbstub_clk_out1/O'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -213,16 +892,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -238,9 +917,8 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module clk_inst has unconnected pin reset
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -253,7 +931,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -265,25 +943,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -303,44 +981,43 @@ Report Cell Usage:
 +------+----------+------+
 |1     |clk_wiz_0 |     1|
 |2     |vga_ram   |     1|
-|3     |BUFG      |     1|
-|4     |CARRY4    |     8|
-|5     |LUT1      |    42|
-|6     |LUT2      |    14|
-|7     |LUT3      |    14|
-|8     |LUT4      |    21|
-|9     |LUT5      |    32|
-|10    |LUT6      |    20|
-|11    |FDCE      |    30|
-|12    |FDRE      |    61|
-|13    |IBUF      |     1|
-|14    |OBUF      |    15|
+|3     |LUT1      |     6|
+|4     |LUT2      |    15|
+|5     |LUT3      |     6|
+|6     |LUT4      |    10|
+|7     |LUT5      |    12|
+|8     |LUT6      |    11|
+|9     |FDCE      |    30|
+|10    |IBUF      |     1|
+|11    |OBUF      |    31|
 +------+----------+------+
 
 Report Instance Areas: 
-+------+-----------+-------+------+
-|      |Instance   |Module |Cells |
-+------+-----------+-------+------+
-|1     |top        |       |   270|
-|2     |  vga_inst |vga    |    86|
-+------+-----------+-------+------+
++------+-----------------+-----------+------+
+|      |Instance         |Module     |Cells |
++------+-----------------+-----------+------+
+|1     |top              |           |   132|
+|2     |  st             |screen_top |    99|
+|3     |    vga_top_inst |vga_top    |    99|
+|4     |      vga_inst   |vga        |    90|
++------+-----------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 665.695 ; gain = 458.676
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 648.313 ; gain = 108.016
-Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 648.313 ; gain = 441.207
+Synthesis finished with 0 errors, 393 critical warnings and 1608 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 665.695 ; gain = 112.348
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 665.695 ; gain = 458.676
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 61 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 4 Warnings, 1 Critical Warnings and 0 Errors encountered.
+150 Infos, 113 Warnings, 200 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 648.313 ; gain = 416.926
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 648.313 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 18 22:12:23 2024...
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 665.695 ; gain = 434.168
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 665.695 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 05 13:19:19 2025...

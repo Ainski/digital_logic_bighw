@@ -13,9 +13,15 @@ module vga_top(
     output hsync,
     output vsync
 );
-    wire [18:0] rd_addr;
+    wire [18:0] rd_addr ;
     wire [8:0] data_in;
     wire rdn;
+    wire test;
+    assign test=wena;
+    wire [8:0]test_data;
+    assign test_data=data_in;
+    wire [18:0]test_addr;
+    assign test_addr=rd_addr;
     vga vga_inst(
         .clk(clk_out),
         .clr_n(clr_n),
@@ -36,11 +42,11 @@ module vga_top(
         .clka(clk_out),
         .dina(wt_data),
         .ena(wena),
-        .wea(wena),
+        .wea({wena}),
         .addrb(rd_addr),
         .clkb(clk_out),
         .doutb(data_in),
-        .enb(~rdn)
+        .enb(1'b1)
      );
    
 endmodule

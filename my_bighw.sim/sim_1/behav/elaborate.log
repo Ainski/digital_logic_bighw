@@ -1,23 +1,28 @@
 Vivado Simulator 2016.2
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a287d1b3527b4828ba6832311d263bb4 --debug typical --relax --mt 2 -L xil_defaultlib -L xpm -L blk_mem_gen_v8_3_3 -L unisims_ver -L unimacro_ver -L secureip --snapshot vga_top_tb_behav xil_defaultlib.vga_top_tb xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto a287d1b3527b4828ba6832311d263bb4 --debug typical --relax --mt 2 -L xil_defaultlib -L xpm -L blk_mem_gen_v8_3_3 -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 8 for port opcode [E:/model/my_bighw/my_bighw.srcs/sources_1/new/top.v:59]
 WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [E:/model/my_bighw/my_bighw.ip_user_files/ipstatic/blk_mem_gen_v8_3_3/simulation/blk_mem_gen_v8_3.v:2414]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [E:/model/my_bighw/my_bighw.ip_user_files/ipstatic/blk_mem_gen_v8_3_3/simulation/blk_mem_gen_v8_3.v:2415]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_output_stage(...
-Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_output_stage(...
-Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3(C_FAMILY="art...
-Compiling module xil_defaultlib.background_rom
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=63,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.PS2
+Compiling module xil_defaultlib.key_translate
+Compiling module xil_defaultlib.translate_line
+Compiling module xil_defaultlib.alu
 Compiling module xil_defaultlib.vga_default
 Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_output_stage(...
 Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_output_stage(...
+Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_softecc_outpu...
 Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3_mem_module(C_...
 Compiling module blk_mem_gen_v8_3_3.blk_mem_axi_regs_fwd_v8_3(C_DATA...
 Compiling module blk_mem_gen_v8_3_3.blk_mem_gen_v8_3_3(C_FAMILY="art...
@@ -25,6 +30,7 @@ Compiling module xil_defaultlib.vga_ram
 Compiling module xil_defaultlib.vga_top
 Compiling module xil_defaultlib.convert_to_vga
 Compiling module xil_defaultlib.screen_top
-Compiling module xil_defaultlib.vga_top_tb
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.top_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot vga_top_tb_behav
+Built simulation snapshot top_tb_behav
